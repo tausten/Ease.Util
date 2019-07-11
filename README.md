@@ -8,13 +8,13 @@ Ease.Util targets .NET Standard 2.0+ ([coverage](https://docs.microsoft.com/en-u
 
     Install-Package Ease.Util
 
-### Release notes
+## Release notes
 
 + The [change log](CHANGELOG.md) summarizes changes by release.
 + We tag Pull Requests and Issues with [milestones](https://github.com/tausten/Ease.Util/milestones) which match to nuget package release numbers.
 + Breaking changes will be called out in the wiki with simple notes on any necessary steps to upgrade.
 
-### Using Ease.Util
+# Using Ease.Util
 
 Quick-start information will be here in this readme, and any details / deep dives will be in the wiki.
 

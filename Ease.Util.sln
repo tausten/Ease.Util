@@ -5,7 +5,13 @@ VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ease.Util", "Ease.Util\Ease.Util.csproj", "{5FE43AF9-37BD-4C57-B04A-F23FFAE119AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ease.Util.Tests", "Ease.Util.Tests\Ease.Util.Tests.csproj", "{70F719D6-7CDB-4489-9A90-B0190AABC005}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ease.Util.Tests", "Ease.Util.Tests\Ease.Util.Tests.csproj", "{70F719D6-7CDB-4489-9A90-B0190AABC005}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{39C3CAF7-AFBC-4676-94B5-EF1EC996B6B3}"
+	ProjectSection(SolutionItems) = preProject
+		azure-pipelines-build-tagged.yml = azure-pipelines-build-tagged.yml
+		azure-pipelines-pull-requests.yml = azure-pipelines-pull-requests.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

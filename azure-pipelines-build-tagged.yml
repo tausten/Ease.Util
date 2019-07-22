@@ -14,9 +14,12 @@ trigger:
 
 # Work around the default PR trigger on everything... :facepalm:
 pr: 
-  branches: 
+  branches:
+    include:
+    - refs/tags/v*
     exclude:
-    - '*'
+    - refs/heads/*
+    - refs/remotes/*
 
 pool:
   vmImage: 'windows-latest'

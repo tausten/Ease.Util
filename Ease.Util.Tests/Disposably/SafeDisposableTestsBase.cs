@@ -30,6 +30,18 @@ namespace Ease.Util.Tests.Disposably
         }
 
         [Test]
+        public void CheckDisposed_Does_Not_Throw_If_Not_Disposed()
+        {
+            // Arrange
+            using (var cut = new TDisposable())
+            {
+                // Act
+                // Assert
+                cut.CheckDisposed();
+            }
+        }
+
+        [Test]
         public void IsDisposed_Is_True_After_Disposed()
         {
             // Arrange
@@ -40,6 +52,21 @@ namespace Ease.Util.Tests.Disposably
 
                 // Assert
                 cut.IsDisposed.Should().BeTrue();
+            }
+        }
+
+        [Test]
+        public void CheckDisposed_Throws_ObjectDisposedException_After_Disposed()
+        {
+            // Arrange
+            using (var cut = new TDisposable())
+            {
+                // Act
+                cut.Dispose();
+
+                // Assert
+                cut.Invoking(x => x.CheckDisposed())
+                    .Should().Throw<ObjectDisposedException>();
             }
         }
 

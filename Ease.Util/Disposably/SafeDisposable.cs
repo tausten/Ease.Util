@@ -28,6 +28,20 @@ namespace Ease.Util.Disposably
             }
         }
 
+        /// <summary>
+        /// Throws an ObjectDisposedException if the object has already been disposed. This can be used to avoid 
+        /// starting something if the object has already been disposed.
+        /// NOTE: This is not a guarantee that a separate thread doesn't dispose the object after the check has been 
+        /// performed.
+        /// </summary>
+        public void CheckDisposed()
+        {
+            if(IsDisposed)
+            {
+                throw new ObjectDisposedException(ToString());
+            }
+        }
+
         #region IDisposable Support
         private readonly object _isDisposedGuard = new object();
         private bool _isDisposed = false; // To detect redundant calls

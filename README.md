@@ -6,7 +6,7 @@ Ease.Util targets .NET Standard 2.0+ ([coverage](https://docs.microsoft.com/en-u
 
 # Installing via NuGet
 
-    [![Nuget](https://img.shields.io/nuget/v/Ease.Util.svg)](https://www.nuget.org/packages/Ease.Util/) : Install-Package Ease.Util
+[![Nuget](https://img.shields.io/nuget/v/Ease.Util.svg)](https://www.nuget.org/packages/Ease.Util/) : `Install-Package Ease.Util`
 
 ## Release notes
 

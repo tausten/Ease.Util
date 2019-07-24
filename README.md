@@ -6,9 +6,13 @@ Ease.Util targets .NET Standard 2.0+ ([coverage](https://docs.microsoft.com/en-u
 
 # Installing via NuGet
 
-    Install-Package Ease.Util
+    [![Nuget](https://img.shields.io/nuget/v/Ease.Util.svg)](https://www.nuget.org/packages/Ease.Util/) : Install-Package Ease.Util
 
 ## Release notes
+
+| **Latest Tagged Build Tests** | **Latest PR Build Tests** |
+| --- | --- |
+| [![Azure DevOps tests](https://img.shields.io/azure-devops/tests/easeoss/Ease.Util/7.svg)](https://dev.azure.com/easeoss/Ease.Util/_build?definitionId=7) | [![Azure DevOps tests](https://img.shields.io/azure-devops/tests/easeoss/Ease.Util/2.svg)](https://dev.azure.com/easeoss/Ease.Util/_build?definitionId=2) |
 
 + The [change log](CHANGELOG.md) summarizes changes by release.
 + We tag Pull Requests and Issues with [milestones](https://github.com/tausten/Ease.Util/milestones) which match to nuget package release numbers.

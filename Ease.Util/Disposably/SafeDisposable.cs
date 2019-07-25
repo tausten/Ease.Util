@@ -85,8 +85,6 @@ namespace Ease.Util.Disposably
         /// <summary>
         /// Override and provide implementation to explicitly nullify fields referencing large objects.
         /// NO thread synchronization required as this method is guaranteed to not be re-entered.
-        /// 
-        /// CAUTION: Your implementation must be kept safe to call more than once.
         /// </summary>
         protected virtual void NullifyLargeFields() { }
 

@@ -16,9 +16,6 @@ namespace Ease.Util.Disposably
         /// inherit directly from SafeDisposable class and override the DisposeManagedObjects() method instead.
         /// 
         /// NO thread synchronization required as this method is guaranteed to not be re-entered.
-        /// 
-        /// CAUTION: Your implementation must be kept safe to call more than once, as this may occur if Dispose is called
-        /// explicitly and the Finalizer is eventually called. This double-call is not guaranteed but may occur.
         /// </summary>
         protected abstract void DisposeUnmanagedObjects();
 

@@ -1,9 +1,3 @@
-# This is the **HOMEPAGE**.
-Refer to [Markdown](http://daringfireball.net/projects/markdown/) for how to write markdown files.
-## Quick Start Notes:
-1. Add images to the *images* folder if the file is referencing an image.
-
-
 # Ease.Util
 
 General-purpose utility libraries and facilities for C#/.Net software development. A catch-all home for things until/unless they find a better home elsewhere.

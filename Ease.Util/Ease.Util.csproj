@@ -5,7 +5,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Version>0.0.0</Version>
     <Authors>Tyler Austen</Authors>
-    <Description>General-purpose utility libraries and facilities for software development. A catch-all home for things until/unless they find a better home elsewhere.</Description>
+    <Description>General-purpose utility libraries and facilities for C#/.Net software development. A catch-all home for things until/unless they find a better home elsewhere.</Description>
     <Copyright>Copyright (c) 2019 Tyler Austen</Copyright>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/tausten/Ease.Util</PackageProjectUrl>

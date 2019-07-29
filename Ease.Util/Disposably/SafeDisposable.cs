@@ -6,6 +6,9 @@ using System;
 
 namespace Ease.Util.Disposably
 {
+    /// <summary>
+    /// Base class for implementation of standard IDisposable pattern in threadsafe, multi-Dispose() protected manner.
+    /// </summary>
     public abstract class SafeDisposable : IDisposable
     {
         /// <summary>

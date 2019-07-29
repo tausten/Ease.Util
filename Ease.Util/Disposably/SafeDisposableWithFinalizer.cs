@@ -6,6 +6,11 @@ using System;
 
 namespace Ease.Util.Disposably
 {
+    /// <summary>
+    /// Base class for implementation of standard IDisposable pattern in threadsafe, multi-Dispose() protected manner. This 
+    /// variant adds support for finalization which is important for classes that use unmanaged resources and need to ensure
+    /// they are cleaned up in the last-ditch finalization flow if they haven't been before.
+    /// </summary>
     public abstract class SafeDisposableWithFinalizer : SafeDisposable
     {
         // Intentionally providing default no-op implementation here as we may only have unmanaged resources to dispose of.

@@ -16,13 +16,13 @@ Ease.Util targets .NET Standard 2.0+ ([coverage](https://docs.microsoft.com/en-u
 | --- | --- |
 | [![Azure DevOps tests](https://img.shields.io/azure-devops/tests/easeoss/Ease.Util/7.svg)](https://dev.azure.com/easeoss/Ease.Util/_build?definitionId=7) | [![Azure DevOps tests](https://img.shields.io/azure-devops/tests/easeoss/Ease.Util/2.svg)](https://dev.azure.com/easeoss/Ease.Util/_build?definitionId=2) |
 
-+ The [change log](CHANGELOG.md) summarizes changes by release.
++ The [change log](https://github.com/tausten/Ease.Util/blob/master/CHANGELOG.md) summarizes changes by release.
 + We tag Pull Requests and Issues with [milestones](https://github.com/tausten/Ease.Util/milestones) which match to nuget package release numbers.
 + Breaking changes will be called out in the wiki with simple notes on any necessary steps to upgrade.
 
 # Using Ease.Util
 
-Quick-start information will be in the [Articles](articles/intro.md), and full API documentation is found [Here](api/index.md).
+Quick-start information will be in the [Articles](articles/intro.md), and full [API documentation is found here](api/index.md).
 
 # 3rd Party Libraries and Contributions
 

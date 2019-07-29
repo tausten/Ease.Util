@@ -7,7 +7,7 @@ using System;
 namespace Ease.Util.Disposably
 {
     /// <summary>
-    /// Base class for implementation of standard IDisposable pattern in threadsafe, multi-Dispose() protected manner.
+    /// Base class for implementation of standard `IDisposable` pattern in threadsafe, multi-Dispose() protected manner.
     /// </summary>
     public abstract class SafeDisposable : IDisposable
     {
@@ -32,7 +32,7 @@ namespace Ease.Util.Disposably
         }
 
         /// <summary>
-        /// Throws an ObjectDisposedException if the object has already been disposed. This can be used to avoid 
+        /// Throws an `ObjectDisposedException` if the object has already been disposed. This can be used to avoid 
         /// starting something if the object has already been disposed.
         /// NOTE: This is not a guarantee that a separate thread doesn't dispose the object after the check has been 
         /// performed.
@@ -77,8 +77,8 @@ namespace Ease.Util.Disposably
         protected abstract void DisposeManagedObjects();
 
         /// <summary>
-        /// You should not need to override this.. if tempted, have a look at the SafeDisposableWithFinalizer class instead.
-        /// Intentionally `internal` so that only the SafeDisposableWithFinalizer can see and override it.
+        /// You should not need to override this.. if tempted, have a look at the <see cref="SafeDisposableWithFinalizer"/> class instead.
+        /// Intentionally `internal` so that only the `SafeDisposableWithFinalizer` can see and override it.
         /// </summary>
         internal virtual void FinalCleanUp()
         {
@@ -94,10 +94,6 @@ namespace Ease.Util.Disposably
         /// <summary>
         /// Safely disposes the object. Can safely be called multiple times and will only invoke the dispose work 
         /// once as a direct result. This implementation is also threadsafe.
-        /// 
-        /// If SafeDisposableWithFinalizer is being used, then DisposeUnmanagedObjects() and
-        /// NullifyLargeFields() may be called a second time during Finalization, and must therefore be kept safe for
-        /// multiple calls.
         /// </summary>
         public void Dispose()
         {

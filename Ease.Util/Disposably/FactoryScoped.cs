@@ -11,6 +11,7 @@ namespace Ease.Util.Disposably
     /// by the simple Dispose pattern. The allocation is done lazily such that if the .Instance member is not accessed, then neither 
     /// `allocateFunction` nor `releaseAction` will be called.
     /// </summary>
+    /// <typeparam name="T">The Type of object the factory will manage.</typeparam>
     public class FactoryScoped<T> : SafeDisposableWithFinalizer
         where T : class
     {
@@ -18,8 +19,8 @@ namespace Ease.Util.Disposably
         private readonly Action<T> _releaseAction;
 
         /// <summary>
-        /// Will use the `allocateFunction` lazily on access to the `.Instance` member to allocate a managed instance of type `T`
-        /// which will be subsequently be passed to `releaseAction` when the FactoryScoped object is Disposed.
+        /// Will use the `allocateFunction` lazily on initial access to the `.Instance` member to allocate a managed instance of 
+        /// type `T` which will be subsequently be passed to `releaseAction` when the FactoryScoped object is Disposed.
         /// </summary>
         /// <param name="allocateFunction">The Func to execute in order to allocate the managed Instance.</param>
         /// <param name="releaseAction">The Action to execute on Dispose() or finalization.</param>

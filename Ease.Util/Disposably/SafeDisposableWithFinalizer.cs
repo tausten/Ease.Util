@@ -7,7 +7,7 @@ using System;
 namespace Ease.Util.Disposably
 {
     /// <summary>
-    /// Base class for implementation of standard IDisposable pattern in threadsafe, multi-Dispose() protected manner. This 
+    /// Base class for implementation of standard `IDisposable` pattern in threadsafe, multi-Dispose() protected manner. This 
     /// variant adds support for finalization which is important for classes that use unmanaged resources and need to ensure
     /// they are cleaned up in the last-ditch finalization flow if they haven't been before.
     /// </summary>
@@ -18,7 +18,8 @@ namespace Ease.Util.Disposably
 
         /// <summary>
         /// Provide implementation to dispose of unmanaged objects. If you don't have unmanaged objects to clean up, then 
-        /// inherit directly from SafeDisposable class and override the DisposeManagedObjects() method instead.
+        /// inherit directly from <see cref="SafeDisposable"/> class and override the <see cref="SafeDisposable.DisposeManagedObjects"/>  
+        /// method instead.
         /// 
         /// NO thread synchronization required as this method is guaranteed to not be re-entered.
         /// </summary>

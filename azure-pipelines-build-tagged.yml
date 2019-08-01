@@ -1,22 +1,10 @@
-# Pipeline for building artifacts for tagged versions
-# Tags that should match:
-#   v4.5.6
-#   v7.8.9-alpha1
-#
-# Tags that should not match:
-#   1.2
-#   HappyFunThing
-#
+# Pipeline for building versioned artifacts
 trigger:
-  tags:
-    include:
-    - v*
+  batch: true
   branches:
     include:
-    - refs/tags/v*
-    exclude:
-    - refs/heads/*
-    - refs/remotes/*
+    - master
+    - develop
 
 # Work around the default PR trigger on everything... :facepalm:
 pr: 
@@ -32,32 +20,22 @@ variables:
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
-# Let's have these named to match the tags
-name: $(Build.SourceBranchName)$(Rev:.r)
-
 steps:
-#  0) parse the $(Build.SourceBranchName) which will be the tag name string
-#  1) split into majorVersion, minorVersion, patchVersion, optional suffixVersion (eg. '-alpha', '.beta1')
-- task: PowerShell@2
-  inputs:
-    targetType: filePath
-    filePath: ./ExtractVersionComponents.ps1
-    arguments: "$(Build.SourceBranchName)"
-    pwsh: true
+- task: GitVersion@5
   displayName: 'Extract version number details'
+  inputs:
+    runtime: 'core'
 
-#  2) run a script to update any version resource files to have the correct version info
-#  3) assign the appropriate NuGet env var / variables with the correct version info
 - task: Assembly-Info-NetCore@2
   inputs:
     Path: '$(Build.SourcesDirectory)'
     FileNames: '**/*Ease.Util.csproj'
     InsertAttributes: true
     GeneratePackageOnBuild: true
-    VersionNumber: '$(majorVersion).$(minorVersion).$(patchVersion)'
-    FileVersionNumber: '$(majorVersion).$(minorVersion).$(patchVersion)'
-    InformationalVersion: '$(majorVersion).$(minorVersion).$(patchVersion)$(suffixVersion)'
-    PackageVersion: '$(majorVersion).$(minorVersion).$(patchVersion)$(suffixVersion)'
+    VersionNumber: '$(GitVersion.AssemblySemVer)'
+    FileVersionNumber: '$(GitVersion.AssemblySemFileVer)'
+    InformationalVersion: '$(GitVersion.InformationalVersion)'
+    PackageVersion: '$(GitVersion.FullSemVer)'
 
 - task: NuGetToolInstaller@1
   displayName: 'Use NuGet'

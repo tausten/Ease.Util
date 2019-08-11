@@ -35,7 +35,8 @@ namespace Ease.Util.Disposably
         /// Throws an `ObjectDisposedException` if the object has already been disposed. This can be used to avoid 
         /// starting something if the object has already been disposed.
         /// NOTE: This is not a guarantee that a separate thread doesn't dispose the object after the check has been 
-        /// performed.
+        /// performed. If you wish to guarantee the object will not be disposed while you're operating on it, then 
+        /// use the <see cref="Lock"/> property in a `using` statement.
         /// </summary>
         public void CheckDisposed()
         {
@@ -44,6 +45,25 @@ namespace Ease.Util.Disposably
                 throw new ObjectDisposedException(ToString());
             }
         }
+
+        /// <summary>
+        /// A fresh `IDisposable` that will acquire a lock preventing this object from being Disposed until
+        /// the returned <see cref="ScopedLock"/> has itself been Disposed. This is intended to _always_ be used 
+        /// with `using`, to allow a block of code to run to completion before another thread can Dispose the 
+        /// parent object.
+        /// 
+        /// <code>
+        /// var theParentDisposable;  // some child of <see cref="SafeDisposable"/>
+        /// using(theParentDisposable.Lock)
+        /// {
+        ///     // ... ok... the code in this block will execute to completion without concern about a 
+        ///     // separate thread calling Dispose
+        /// }
+        /// // ... theParentDisposable itself is _not_ Disposed here...  we've only released its internal 
+        /// // guard...   we (and anyone else) are still free to use it until it is itself Disposed.
+        /// </code>
+        /// </summary>
+        public ScopedLock Lock => new ScopedLock(_isDisposedGuard);
 
         #region IDisposable Support
         private readonly object _isDisposedGuard = new object();

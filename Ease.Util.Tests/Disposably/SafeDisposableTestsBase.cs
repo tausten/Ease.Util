@@ -71,6 +71,40 @@ namespace Ease.Util.Tests.Disposably
         }
 
         [Test]
+        public void Using_Lock_Doesnt_Dispose_The_Parent()
+        {
+            // Arrange
+            using (var cut = new TDisposable())
+            {
+                // Act
+                using (cut.Lock)
+                {
+                    // Assert
+                    cut.IsDisposed.Should().BeFalse();
+                }
+                cut.IsDisposed.Should().BeFalse();
+            }
+        }
+
+        [Test]
+        public void Using_Lock_Creates_New_ScopedLock_Instance_On_Each_Access()
+        {
+            // Arrange
+            using (var cut = new TDisposable())
+            {
+                // Act
+                using (var outerLock = cut.Lock)
+                {
+                    using (var innerLock = cut.Lock)
+                    {
+                        // Assert
+                        innerLock.Should().NotBeSameAs(outerLock);
+                    }
+                }
+            }
+        }
+
+        [Test]
         public void DisposeManagedObjects_Is_Only_Called_Once_For_Repeated_Calls_To_Dispose()
         {
             // Arrange

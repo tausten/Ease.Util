@@ -26,12 +26,19 @@ steps:
   inputs:
     runtime: 'core'
 
+- task: FileContenttoVariable@2
+  displayName: 'Reading CHANGELOG.md'
+  inputs:
+    FilePath: 'CHANGELOG.md'
+    VariableName: 'ReleaseNotes'
+
 - task: Assembly-Info-NetCore@2
   inputs:
     Path: '$(Build.SourcesDirectory)'
     FileNames: '**/*Ease.Util.csproj'
     InsertAttributes: true
     GeneratePackageOnBuild: true
+    PackageReleaseNotes: $(ReleaseNotes)
     VersionNumber: '$(GitVersion.AssemblySemVer)'
     FileVersionNumber: '$(GitVersion.AssemblySemFileVer)'
     InformationalVersion: '$(GitVersion.InformationalVersion)'

@@ -1,3 +1,9 @@
+## 0.1.0
+* Integrated GitVer for SemVer management
+* String.ToValueOr(...) extension method
+* ScopedLock and new SafeDisposable.Lock property to close Dispose race condition
+* Minor doc updates
+
 ## 0.0.2
 * IDisposable pattern implementation
 * Scope support classes

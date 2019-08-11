@@ -28,7 +28,6 @@ namespace Ease.Util.Disposably
         {
             _lazyInstance = new Lazy<T>(allocateFunction ?? throw new ArgumentNullException(nameof(allocateFunction)));
             _releaseAction = releaseAction ?? throw new ArgumentNullException(nameof(releaseAction));
-
         }
 
         /// <summary>

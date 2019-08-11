@@ -19,6 +19,7 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
+  releaseNotesFlattened: 'Miscellaneous updates.'
 
 steps:
 - task: GitVersion@5
@@ -26,11 +27,12 @@ steps:
   inputs:
     runtime: 'core'
 
-- task: FileContenttoVariable@2
-  displayName: 'Reading CHANGELOG.md'
+- task: PowerShell@2
+  displayName: 'Reading CHANGELOG.md for package release notes'
   inputs:
-    FilePath: 'CHANGELOG.md'
-    VariableName: 'ReleaseNotes'
+    targetType: 'inline'
+    script: 'Write-Host (''##vso[task.setvariable variable=releaseNotesFlattened]<p>'' + ((gc CHANGELOG.md) -join ''</p><p>'')) ''</p>'''
+    pwsh: true
 
 - task: Assembly-Info-NetCore@2
   inputs:
@@ -38,7 +40,7 @@ steps:
     FileNames: '**/*Ease.Util.csproj'
     InsertAttributes: true
     GeneratePackageOnBuild: true
-    PackageReleaseNotes: $(ReleaseNotes)
+    PackageReleaseNotes: $(releaseNotesFlattened)
     VersionNumber: '$(GitVersion.AssemblySemVer)'
     FileVersionNumber: '$(GitVersion.AssemblySemFileVer)'
     InformationalVersion: '$(GitVersion.InformationalVersion)'

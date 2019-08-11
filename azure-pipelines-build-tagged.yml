@@ -31,6 +31,7 @@ steps:
   inputs:
     FilePath: 'CHANGELOG.md'
     VariableName: 'ReleaseNotes'
+    AddNewlines: true
 
 - task: Assembly-Info-NetCore@2
   inputs:

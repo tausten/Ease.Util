@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Disposably.FactoryScoped-1.html",
-          "hash": "YeZJGe1OYjvwCYPA7yzwxA=="
+          "hash": "eV/aMhv29hh9swpSlrK9pA=="
         }
       },
       "is_incremental": false,
@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Disposably.SafeDisposable.html",
-          "hash": "Xexg31/C0ij9UNcuSwv2jg=="
+          "hash": "svN61nMIqRmLwIckPRgxpQ=="
         }
       },
       "is_incremental": false,
@@ -33,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Disposably.SafeDisposableWithFinalizer.html",
-          "hash": "ttemcJtOaO4638xHvRd++A=="
+          "hash": "hnsw9olpjufHNx/l0IszzQ=="
         }
       },
       "is_incremental": false,
@@ -45,7 +45,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Disposably.Scoped.html",
-          "hash": "AAQtR4S+X6jCwqB1Vn4kqQ=="
+          "hash": "tFnlxdxhvyET+cegpef5mw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ease.Util.Disposably.ScopedLock.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ease.Util.Disposably.ScopedLock.html",
+          "hash": "uwRXGurqrmoygh4dH/xHkA=="
         }
       },
       "is_incremental": false,
@@ -57,7 +69,31 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Disposably.html",
-          "hash": "bn6s+9XcaRgxLq3oAkgy3w=="
+          "hash": "dTenKVLJH8Z58ZMDWINXfA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ease.Util.Extensions.StringExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ease.Util.Extensions.StringExtensions.html",
+          "hash": "lZ7Po9w+siuKroIjFagjQA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ease.Util.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ease.Util.Extensions.html",
+          "hash": "1DJvq+08XzEZoKFGMVuZPQ=="
         }
       },
       "is_incremental": false,
@@ -69,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "LOSZ+27dmjwGIEyTDkDtqA=="
+          "hash": "BBjp0utHR/vjurPmIrVvlQ=="
         }
       },
       "is_incremental": false,
@@ -81,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "z34280Qx5v9dP4iFJxEMCQ=="
+          "hash": "znuveO9JgFR9l5QGe5tiIQ=="
         }
       },
       "is_incremental": false,
@@ -93,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/disposably.html",
-          "hash": "JUvgek9YapnI3B1kyrAmHQ=="
+          "hash": "NlGrRJBNU7wKDNG6JoVM8A=="
         }
       },
       "is_incremental": false,
@@ -105,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "kzX18xZ2nSDOQ0fpLKIElw=="
+          "hash": "ZVts/YwxfGie5UfaHXcD3Q=="
         }
       },
       "is_incremental": false,
@@ -129,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "4nsDyGFyG0/0ExNK3CeP/w=="
+          "hash": "FmMH5Tbq8NWpFJbPaproCA=="
         }
       },
       "is_incremental": false,
@@ -159,23 +195,23 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "TocDocumentProcessor": {
+        "ConceptualDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
-          "total_file_count": 0,
+          "total_file_count": 4,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 5,
+          "total_file_count": 8,
           "skipped_file_count": 0
         },
-        "ConceptualDocumentProcessor": {
+        "TocDocumentProcessor": {
           "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
-          "total_file_count": 4,
+          "total_file_count": 0,
           "skipped_file_count": 0
         }
       }

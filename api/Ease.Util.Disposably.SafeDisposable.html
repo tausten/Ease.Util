@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SafeDisposable
    ">
-    <meta name="generator" content="docfx 2.43.2.0">
+    <meta name="generator" content="docfx 2.44.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -120,10 +120,10 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/tausten/Ease.Util/new/v0.0.2/apiSpec/new?filename=Ease_Util_Disposably_SafeDisposable_IsDisposed.md&amp;value=---%0Auid%3A%20Ease.Util.Disposably.SafeDisposable.IsDisposed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/tausten/Ease.Util/new/master/apiSpec/new?filename=Ease_Util_Disposably_SafeDisposable_IsDisposed.md&amp;value=---%0Auid%3A%20Ease.Util.Disposably.SafeDisposable.IsDisposed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/tausten/Ease.Util/blob/v0.0.2/Ease.Util/Disposably/SafeDisposable.cs/#L17">View Source</a>
+    <a href="https://github.com/tausten/Ease.Util/blob/master/Ease.Util/Disposably/SafeDisposable.cs/#L17">View Source</a>
   </span>
   <a id="Ease_Util_Disposably_SafeDisposable_IsDisposed_" data-uid="Ease.Util.Disposably.SafeDisposable.IsDisposed*"></a>
   <h4 id="Ease_Util_Disposably_SafeDisposable_IsDisposed" data-uid="Ease.Util.Disposably.SafeDisposable.IsDisposed">IsDisposed</h4>
@@ -149,21 +149,64 @@
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/tausten/Ease.Util/new/master/apiSpec/new?filename=Ease_Util_Disposably_SafeDisposable_Lock.md&amp;value=---%0Auid%3A%20Ease.Util.Disposably.SafeDisposable.Lock%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/tausten/Ease.Util/blob/master/Ease.Util/Disposably/SafeDisposable.cs/#L66">View Source</a>
+  </span>
+  <a id="Ease_Util_Disposably_SafeDisposable_Lock_" data-uid="Ease.Util.Disposably.SafeDisposable.Lock*"></a>
+  <h4 id="Ease_Util_Disposably_SafeDisposable_Lock" data-uid="Ease.Util.Disposably.SafeDisposable.Lock">Lock</h4>
+  <div class="markdown level1 summary"><p>A fresh <code>IDisposable</code> that will acquire a lock preventing this object from being Disposed until
+the returned <a class="xref" href="Ease.Util.Disposably.ScopedLock.html">ScopedLock</a> has itself been Disposed. This is intended to <em>always</em> be used
+with <code>using</code>, to allow a block of code to run to completion before another thread can Dispose the
+parent object.</p>
+<pre><code>var theParentDisposable;  // some child of <a class="xref" href="Ease.Util.Disposably.SafeDisposable.html">SafeDisposable</a>
+using(theParentDisposable.Lock)
+{
+    // ... ok... the code in this block will execute to completion without concern about a 
+    // separate thread calling Dispose
+}
+// ... theParentDisposable itself is _not_ Disposed here...  we&apos;ve only released its internal 
+// guard...   we (and anyone else) are still free to use it until it is itself Disposed.</code></pre>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ScopedLock Lock { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Ease.Util.Disposably.ScopedLock.html">ScopedLock</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/tausten/Ease.Util/new/v0.0.2/apiSpec/new?filename=Ease_Util_Disposably_SafeDisposable_CheckDisposed.md&amp;value=---%0Auid%3A%20Ease.Util.Disposably.SafeDisposable.CheckDisposed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/tausten/Ease.Util/new/master/apiSpec/new?filename=Ease_Util_Disposably_SafeDisposable_CheckDisposed.md&amp;value=---%0Auid%3A%20Ease.Util.Disposably.SafeDisposable.CheckDisposed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/tausten/Ease.Util/blob/v0.0.2/Ease.Util/Disposably/SafeDisposable.cs/#L40">View Source</a>
+    <a href="https://github.com/tausten/Ease.Util/blob/master/Ease.Util/Disposably/SafeDisposable.cs/#L41">View Source</a>
   </span>
   <a id="Ease_Util_Disposably_SafeDisposable_CheckDisposed_" data-uid="Ease.Util.Disposably.SafeDisposable.CheckDisposed*"></a>
   <h4 id="Ease_Util_Disposably_SafeDisposable_CheckDisposed" data-uid="Ease.Util.Disposably.SafeDisposable.CheckDisposed">CheckDisposed()</h4>
   <div class="markdown level1 summary"><p>Throws an <code>ObjectDisposedException</code> if the object has already been disposed. This can be used to avoid
 starting something if the object has already been disposed.
 NOTE: This is not a guarantee that a separate thread doesn't dispose the object after the check has been
-performed.</p>
+performed. If you wish to guarantee the object will not be disposed while you're operating on it, then
+use the <a class="xref" href="Ease.Util.Disposably.SafeDisposable.html#Ease_Util_Disposably_SafeDisposable_Lock">Lock</a> property in a <code>using</code> statement.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -172,10 +215,10 @@ performed.</p>
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/tausten/Ease.Util/new/v0.0.2/apiSpec/new?filename=Ease_Util_Disposably_SafeDisposable_Dispose.md&amp;value=---%0Auid%3A%20Ease.Util.Disposably.SafeDisposable.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/tausten/Ease.Util/new/master/apiSpec/new?filename=Ease_Util_Disposably_SafeDisposable_Dispose.md&amp;value=---%0Auid%3A%20Ease.Util.Disposably.SafeDisposable.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/tausten/Ease.Util/blob/v0.0.2/Ease.Util/Disposably/SafeDisposable.cs/#L98">View Source</a>
+    <a href="https://github.com/tausten/Ease.Util/blob/master/Ease.Util/Disposably/SafeDisposable.cs/#L118">View Source</a>
   </span>
   <a id="Ease_Util_Disposably_SafeDisposable_Dispose_" data-uid="Ease.Util.Disposably.SafeDisposable.Dispose*"></a>
   <h4 id="Ease_Util_Disposably_SafeDisposable_Dispose" data-uid="Ease.Util.Disposably.SafeDisposable.Dispose">Dispose()</h4>
@@ -189,10 +232,10 @@ once as a direct result. This implementation is also threadsafe.</p>
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/tausten/Ease.Util/new/v0.0.2/apiSpec/new?filename=Ease_Util_Disposably_SafeDisposable_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20Ease.Util.Disposably.SafeDisposable.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/tausten/Ease.Util/new/master/apiSpec/new?filename=Ease_Util_Disposably_SafeDisposable_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20Ease.Util.Disposably.SafeDisposable.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/tausten/Ease.Util/blob/v0.0.2/Ease.Util/Disposably/SafeDisposable.cs/#L52">View Source</a>
+    <a href="https://github.com/tausten/Ease.Util/blob/master/Ease.Util/Disposably/SafeDisposable.cs/#L72">View Source</a>
   </span>
   <a id="Ease_Util_Disposably_SafeDisposable_Dispose_" data-uid="Ease.Util.Disposably.SafeDisposable.Dispose*"></a>
   <h4 id="Ease_Util_Disposably_SafeDisposable_Dispose_System_Boolean_" data-uid="Ease.Util.Disposably.SafeDisposable.Dispose(System.Boolean)">Dispose(Boolean)</h4>
@@ -221,10 +264,10 @@ once as a direct result. This implementation is also threadsafe.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/tausten/Ease.Util/new/v0.0.2/apiSpec/new?filename=Ease_Util_Disposably_SafeDisposable_DisposeManagedObjects.md&amp;value=---%0Auid%3A%20Ease.Util.Disposably.SafeDisposable.DisposeManagedObjects%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/tausten/Ease.Util/new/master/apiSpec/new?filename=Ease_Util_Disposably_SafeDisposable_DisposeManagedObjects.md&amp;value=---%0Auid%3A%20Ease.Util.Disposably.SafeDisposable.DisposeManagedObjects%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/tausten/Ease.Util/blob/v0.0.2/Ease.Util/Disposably/SafeDisposable.cs/#L77">View Source</a>
+    <a href="https://github.com/tausten/Ease.Util/blob/master/Ease.Util/Disposably/SafeDisposable.cs/#L97">View Source</a>
   </span>
   <a id="Ease_Util_Disposably_SafeDisposable_DisposeManagedObjects_" data-uid="Ease.Util.Disposably.SafeDisposable.DisposeManagedObjects*"></a>
   <h4 id="Ease_Util_Disposably_SafeDisposable_DisposeManagedObjects" data-uid="Ease.Util.Disposably.SafeDisposable.DisposeManagedObjects">DisposeManagedObjects()</h4>
@@ -238,10 +281,10 @@ NO thread synchronization required as this method is guaranteed to not be re-ent
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/tausten/Ease.Util/new/v0.0.2/apiSpec/new?filename=Ease_Util_Disposably_SafeDisposable_NullifyLargeFields.md&amp;value=---%0Auid%3A%20Ease.Util.Disposably.SafeDisposable.NullifyLargeFields%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/tausten/Ease.Util/new/master/apiSpec/new?filename=Ease_Util_Disposably_SafeDisposable_NullifyLargeFields.md&amp;value=---%0Auid%3A%20Ease.Util.Disposably.SafeDisposable.NullifyLargeFields%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/tausten/Ease.Util/blob/v0.0.2/Ease.Util/Disposably/SafeDisposable.cs/#L92">View Source</a>
+    <a href="https://github.com/tausten/Ease.Util/blob/master/Ease.Util/Disposably/SafeDisposable.cs/#L112">View Source</a>
   </span>
   <a id="Ease_Util_Disposably_SafeDisposable_NullifyLargeFields_" data-uid="Ease.Util.Disposably.SafeDisposable.NullifyLargeFields*"></a>
   <h4 id="Ease_Util_Disposably_SafeDisposable_NullifyLargeFields" data-uid="Ease.Util.Disposably.SafeDisposable.NullifyLargeFields">NullifyLargeFields()</h4>
@@ -265,10 +308,10 @@ NO thread synchronization required as this method is guaranteed to not be re-ent
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/tausten/Ease.Util/new/v0.0.2/apiSpec/new?filename=Ease_Util_Disposably_SafeDisposable.md&amp;value=---%0Auid%3A%20Ease.Util.Disposably.SafeDisposable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/tausten/Ease.Util/new/master/apiSpec/new?filename=Ease_Util_Disposably_SafeDisposable.md&amp;value=---%0Auid%3A%20Ease.Util.Disposably.SafeDisposable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/tausten/Ease.Util/blob/v0.0.2/Ease.Util/Disposably/SafeDisposable.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/tausten/Ease.Util/blob/master/Ease.Util/Disposably/SafeDisposable.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

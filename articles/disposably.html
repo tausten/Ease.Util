@@ -8,7 +8,7 @@
     <title>Ease.Util.Disposably </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Ease.Util.Disposably ">
-    <meta name="generator" content="docfx 2.43.2.0">
+    <meta name="generator" content="docfx 2.44.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -89,7 +89,8 @@ falling into some pitfalls.</p>
 }
 </code></pre>
 <p>With that, you have a thread-safe implementation of the pattern that will gracefully handle repeated calls to <code>Dispose()</code>, and
-provide your class some additional facilities such as the <code>IsDisposed</code> property, and the <code>CheckDisposed()</code> method.</p>
+provide your class some additional facilities such as the <code>IsDisposed</code> and <code>Lock</code> properties, and the <code>CheckDisposed()</code>
+method.</p>
 <p>If your class holds references to large objects, and you want a way to nullify the references explicitly, then you can
 override the <code>NullifyLargeFields()</code> method. It will be called after <code>DisposeManagedObjects()</code>, so you don't need to
 be nullifying references in there if you wish to separate the two operations.</p>
@@ -125,6 +126,11 @@ using (new Scoped(() =&gt; Console.WriteLine(&quot;&gt;&gt; ENTERING&quot;), () 
 </code></pre>
 <p>Coupled with closures, you can leverage state from the outer scope in your <code>enterAction</code> and <code>exitAction</code> to accomplish
 less trivial things.</p>
+<h3 id="scopedlock"><a class="xref" href="../api/Ease.Util.Disposably.ScopedLock.html"><code>ScopedLock</code></a></h3>
+<p>One application of <code>Scoped</code> is to provide a means for sharing the ability to acquire a lock on an internal guard object,
+giving users of your class the ability to ensure certain blocks of code can execute with a lock on the guard, without
+having to expose the guard itself directly to the outside world. This is how the <code>CheckDisposed()</code> race condition can
+be addressed with <code>SafeDisposable</code> objects via their <code>.Lock</code> property as an example.</p>
 <h3 id="factoryscopedt"><a class="xref" href="../api/Ease.Util.Disposably.FactoryScoped-1.html"><code>FactoryScoped&lt;T&gt;</code></a></h3>
 <p>If you're working with an implementation of the <em>factory pattern</em> that includes an explicit release, you can lean on
 the <a class="xref" href="../api/Ease.Util.Disposably.FactoryScoped-1.html"><code>FactoryScoped&lt;T&gt;</code></a> class to map this into the <code>IDisposable</code> pattern so that you
@@ -156,7 +162,7 @@ is signature-compatible with <code>Action&lt;T&gt;</code>. Often times, the seco
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/tausten/Ease.Util/blob/v0.0.2/docfx_project/articles/disposably.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/tausten/Ease.Util/blob/master/docfx_project/articles/disposably.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Ease.Util.Disposably
    ">
-    <meta name="generator" content="docfx 2.43.2.0">
+    <meta name="generator" content="docfx 2.44.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -92,6 +92,36 @@ they are cleaned up in the last-ditch finalization flow if they haven't been bef
 </section>
       <h4><a class="xref" href="Ease.Util.Disposably.Scoped.html">Scoped</a></h4>
       <section><p>A utility class for managing ad-hoc scope states.</p>
+</section>
+      <h4><a class="xref" href="Ease.Util.Disposably.ScopedLock.html">ScopedLock</a></h4>
+      <section><p>A class for mapping locking into a Disposable pattern. Normally, you should just use <code>lock</code> for your traditional
+thread synchronization, but this class helps in the case where you wish to allow a user of your class to &quot;borrow&quot; an
+internal guard object so they may lock it for the duration of a <code>using</code> block. Rather than just handing out your
+inner guard object and losing control of it, you can narrow the exposure to the using block, and continue to hide
+the guard object itself.</p>
+<p>See <a class="xref" href="Ease.Util.Disposably.SafeDisposable.html">SafeDisposable</a> for an example of one special case where this can be used to close a race condition.</p>
+<pre><code>class SomeClass
+{
+    private readonly object _guard = new object();
+    // ... a bunch of functionality that relies upon the _guard ...
+
+    /// 
+    /// The property to allow clients of your class to borrow your 
+    /// _guard object briefly.
+    /// 
+    public ScopedLock TemporaryLock { get { return new ScopedLock(_guard); } }
+}
+
+SomeClass theThing; // obtained however is appropriate for your situation
+
+// ... client now wishes to make sure their block of code can execute to 
+// completion before any of your methods can acquire the lock...
+
+using (theThing.TemporaryLock)
+{
+    // ... go ahead and do stuff knowing that theThing&apos;s lock won&apos;t be acquired 
+    // before this scope is exited.
+}</code></pre>
 </section>
 </article>
           </div>

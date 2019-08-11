@@ -132,6 +132,19 @@ references:
   isSpec: "True"
   fullName: Ease.Util.Disposably.SafeDisposable.IsDisposed
   nameWithType: SafeDisposable.IsDisposed
+- uid: Ease.Util.Disposably.SafeDisposable.Lock
+  name: Lock
+  href: api/Ease.Util.Disposably.SafeDisposable.html#Ease_Util_Disposably_SafeDisposable_Lock
+  commentId: P:Ease.Util.Disposably.SafeDisposable.Lock
+  fullName: Ease.Util.Disposably.SafeDisposable.Lock
+  nameWithType: SafeDisposable.Lock
+- uid: Ease.Util.Disposably.SafeDisposable.Lock*
+  name: Lock
+  href: api/Ease.Util.Disposably.SafeDisposable.html#Ease_Util_Disposably_SafeDisposable_Lock_
+  commentId: Overload:Ease.Util.Disposably.SafeDisposable.Lock
+  isSpec: "True"
+  fullName: Ease.Util.Disposably.SafeDisposable.Lock
+  nameWithType: SafeDisposable.Lock
 - uid: Ease.Util.Disposably.SafeDisposable.NullifyLargeFields
   name: NullifyLargeFields()
   href: api/Ease.Util.Disposably.SafeDisposable.html#Ease_Util_Disposably_SafeDisposable_NullifyLargeFields
@@ -222,3 +235,50 @@ references:
   isSpec: "True"
   fullName: Ease.Util.Disposably.Scoped.DisposeUnmanagedObjects
   nameWithType: Scoped.DisposeUnmanagedObjects
+- uid: Ease.Util.Disposably.ScopedLock
+  name: ScopedLock
+  href: api/Ease.Util.Disposably.ScopedLock.html
+  commentId: T:Ease.Util.Disposably.ScopedLock
+  fullName: Ease.Util.Disposably.ScopedLock
+  nameWithType: ScopedLock
+- uid: Ease.Util.Disposably.ScopedLock.#ctor(System.Object)
+  name: ScopedLock(Object)
+  href: api/Ease.Util.Disposably.ScopedLock.html#Ease_Util_Disposably_ScopedLock__ctor_System_Object_
+  commentId: M:Ease.Util.Disposably.ScopedLock.#ctor(System.Object)
+  fullName: Ease.Util.Disposably.ScopedLock.ScopedLock(System.Object)
+  nameWithType: ScopedLock.ScopedLock(Object)
+- uid: Ease.Util.Disposably.ScopedLock.#ctor*
+  name: ScopedLock
+  href: api/Ease.Util.Disposably.ScopedLock.html#Ease_Util_Disposably_ScopedLock__ctor_
+  commentId: Overload:Ease.Util.Disposably.ScopedLock.#ctor
+  isSpec: "True"
+  fullName: Ease.Util.Disposably.ScopedLock.ScopedLock
+  nameWithType: ScopedLock.ScopedLock
+- uid: Ease.Util.Extensions
+  name: Ease.Util.Extensions
+  href: api/Ease.Util.Extensions.html
+  commentId: N:Ease.Util.Extensions
+  fullName: Ease.Util.Extensions
+  nameWithType: Ease.Util.Extensions
+- uid: Ease.Util.Extensions.StringExtensions
+  name: StringExtensions
+  href: api/Ease.Util.Extensions.StringExtensions.html
+  commentId: T:Ease.Util.Extensions.StringExtensions
+  fullName: Ease.Util.Extensions.StringExtensions
+  nameWithType: StringExtensions
+- uid: Ease.Util.Extensions.StringExtensions.ToValueOr*
+  name: ToValueOr
+  href: api/Ease.Util.Extensions.StringExtensions.html#Ease_Util_Extensions_StringExtensions_ToValueOr_
+  commentId: Overload:Ease.Util.Extensions.StringExtensions.ToValueOr
+  isSpec: "True"
+  fullName: Ease.Util.Extensions.StringExtensions.ToValueOr
+  nameWithType: StringExtensions.ToValueOr
+- uid: Ease.Util.Extensions.StringExtensions.ToValueOr``1(System.String,``0,System.IFormatProvider)
+  name: ToValueOr<T>(String, T, IFormatProvider)
+  href: api/Ease.Util.Extensions.StringExtensions.html#Ease_Util_Extensions_StringExtensions_ToValueOr__1_System_String___0_System_IFormatProvider_
+  commentId: M:Ease.Util.Extensions.StringExtensions.ToValueOr``1(System.String,``0,System.IFormatProvider)
+  name.vb: ToValueOr(Of T)(String, T, IFormatProvider)
+  fullName: Ease.Util.Extensions.StringExtensions.ToValueOr<T>(System.String, T, System.IFormatProvider)
+  fullName.vb: Ease.Util.Extensions.StringExtensions.ToValueOr(Of T)(System.String, T, System.IFormatProvider)
+  nameWithType: StringExtensions.ToValueOr<T>(String, T, IFormatProvider)
+  nameWithType.vb: StringExtensions.ToValueOr(Of T)(String, T, IFormatProvider)

@@ -28,10 +28,10 @@ steps:
     runtime: 'core'
 
 - task: PowerShell@2
-  displayName: 'Reading CHANGELOG.md'
+  displayName: 'Reading CHANGELOG.md for package release notes'
   inputs:
     targetType: 'inline'
-    script: 'Write-Host (''##vso[task.setvariable variable=releaseNotesFlattened]'' + ((gc CHANGELOG.md) -join " |"))'
+    script: 'Write-Host (''##vso[task.setvariable variable=releaseNotesFlattened]<p>'' + ((gc CHANGELOG.md) -join ''</p><p>'')) ''</p>'''
     pwsh: true
 
 - task: Assembly-Info-NetCore@2

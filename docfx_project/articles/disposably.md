@@ -24,7 +24,8 @@ public class MyDisposable : SafeDisposable
 ```
 
 With that, you have a thread-safe implementation of the pattern that will gracefully handle repeated calls to `Dispose()`, and 
-provide your class some additional facilities such as the `IsDisposed` property, and the `CheckDisposed()` method. 
+provide your class some additional facilities such as the `IsDisposed` and `Lock` properties, and the `CheckDisposed()` 
+method. 
 
 If your class holds references to large objects, and you want a way to nullify the references explicitly, then you can 
 override the `NullifyLargeFields()` method. It will be called after `DisposeManagedObjects()`, so you don't need to 
@@ -70,6 +71,12 @@ using (new Scoped(() => Console.WriteLine(">> ENTERING"), () => Console.WriteLin
 
 Coupled with closures, you can leverage state from the outer scope in your `enterAction` and `exitAction` to accomplish 
 less trivial things.
+
+### [`ScopedLock`](xref:Ease.Util.Disposably.ScopedLock)
+One application of `Scoped` is to provide a means for sharing the ability to acquire a lock on an internal guard object, 
+giving users of your class the ability to ensure certain blocks of code can execute with a lock on the guard, without
+having to expose the guard itself directly to the outside world. This is how the `CheckDisposed()` race condition can 
+be addressed with `SafeDisposable` objects via their `.Lock` property as an example.
 
 ### [`FactoryScoped<T>`](xref:Ease.Util.Disposably.FactoryScoped`1)
 If you're working with an implementation of the _factory pattern_ that includes an explicit release, you can lean on

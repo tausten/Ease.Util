@@ -7,6 +7,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Extensions\Resources\NonAmbiguous.txt" />
+    <None Remove="Extensions\Resources\ShortestExplicitAmbiguous.txt" />
+    <None Remove="Extensions\Resources\SubFolder\EXPLICITAmbiguous.txt" />
+    <None Remove="Extensions\Resources\SubFolder\MediumExplicitAmbiguous.txt" />
+    <None Remove="Extensions\Resources\SubFolder\PurposefullyLongestExplicitAmbiguous.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Extensions\Resources\ShortestExplicitAmbiguous.txt" />
+    <EmbeddedResource Include="Extensions\Resources\NonAmbiguous.txt" />
+    <EmbeddedResource Include="Extensions\Resources\SubFolder\EXPLICITAmbiguous.txt" />
+    <EmbeddedResource Include="Extensions\Resources\SubFolder\PurposefullyLongestExplicitAmbiguous.txt" />
+    <EmbeddedResource Include="Extensions\Resources\SubFolder\MediumExplicitAmbiguous.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="FluentAssertions" Version="5.7.0" />
     <PackageReference Include="nunit" Version="3.11.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.11.0" />

@@ -1,3 +1,7 @@
+## 0.2.0
+* String.ToValueOr(...) fixes: properly support TimeSpan, support Enums, more test coverage
+* Assembly.GetResourceBySuffixAs[Stream|String] implementations
+
 ## 0.1.0
 * Integrated GitVer for SemVer management
 * String.ToValueOr(...) extension method

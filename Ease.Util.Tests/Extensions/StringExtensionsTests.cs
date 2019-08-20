@@ -33,7 +33,7 @@ namespace Ease.Util.Tests.Extensions
 
             IsOrganic = HasCarbon | HasHydrogen | HasOxygen,
 
-            IsLiving = 0x10,
+            IsLiving = 0x10 | IsOrganic,
             IsPlant = 0x20 | IsLiving,
             IsAnimal = 0x40 | IsLiving
 
@@ -485,5 +485,20 @@ namespace Ease.Util.Tests.Extensions
             ToValueOr_Converts_Value_From_ToString((DateTime?)new DateTime(2019, 8, 10, 14, 35, 46, DateTimeKind.Utc), formatProviderMode);
         }
         #endregion
+
+        [TestCase("HasCarbon, HasHydrogen, HasOxygen", SomeFlagEnumType.IsOrganic)]
+        [TestCase("IsOrganic", SomeFlagEnumType.HasCarbon | SomeFlagEnumType.HasHydrogen | SomeFlagEnumType.HasOxygen)]
+        [TestCase("HasCarbon, HasHydrogen", SomeFlagEnumType.HasCarbon | SomeFlagEnumType.HasHydrogen)]
+        [TestCase("IsAnimal", SomeFlagEnumType.IsAnimal)]
+        public void ToValueOr_Converts_Value_From<T>(string input, T expectedValue)
+        {
+            // Arrange
+            // Act
+            var result = input.ToValueOr((T)default);
+
+            // Assert
+            result.Should().Be(expectedValue);
+        }
+
     }
 }

@@ -3,61 +3,42 @@
 //
 
 using System.IO;
+using Ease.Util.Extensions;
 
-namespace Ease.Util.Temp.Memory
+namespace Ease.Util.Temp.Local
 {
+    /// <summary>
+    /// Implementation of <see cref="IScopedTempFileManager"/> backed by local filesystem. This will incur 
+    /// local file IO overhead, so be sure that this overhead is acceptable before using.
+    /// </summary>
     public class LocalScopedTempFileManager : ScopedTempFileManager
     {
         private readonly DirectoryInfo _directoryInfo;
 
+        /// <summary>
+        /// Default temporary file management mechanism will be used.
+        /// </summary>
         public LocalScopedTempFileManager() : this(null) { }
 
+        /// <summary>
+        /// Temporary files will be managed under the specified <paramref name="directoryInfo"/>. The manager
+        /// assumes it takes ownership of the directory (and any subdirectories) and will delete them when
+        /// `Dispose(..)` is called, so do not attempt to have multiple managers operating on the same folder
+        /// or non-deterministic behavior will occur.
+        /// </summary>
+        /// <param name="directoryInfo">The DirectoryInfo specifying the directory to manage as a temp folder</param>
         public LocalScopedTempFileManager(DirectoryInfo directoryInfo)
         {
-                _directoryInfo = directoryInfo;
+            _directoryInfo = directoryInfo;
         }
 
         protected override ScopedTempFile AllocateFile()
         {
-            var newFileInfo = SafeGetNewFileInfo();
+            var newFileInfo = new FileInfo(null != _directoryInfo
+                ? _directoryInfo.GetTempFileName()
+                : Path.GetTempFileName());
+
             return new LocalScopedTempFile(newFileInfo);
-        }
-
-        private FileInfo SafeGetNewFileInfo()
-        {
-            FileInfo result = null;
-            if (null != _directoryInfo)
-            {
-                while (null == result)
-                {
-                    // Ensure the full path to the directory exists before trying to create files under it...
-                    Directory.CreateDirectory(_directoryInfo.FullName);
-
-                    try
-                    {
-                        var candidate = Path.Combine(_directoryInfo.FullName, Path.GetRandomFileName());
-                        // Intentionally using an explicit exists check the further narrow the race window 
-                        // before attempting the actual create.
-                        if (!File.Exists(candidate))
-                        {
-                            using (var fs = new FileStream(candidate, FileMode.CreateNew))
-                            {
-                                fs.Flush();
-                            }
-                            result = new FileInfo(candidate);
-                        }
-                    }
-                    catch (IOException)
-                    {
-                        // Try again with different file.
-                    }
-                }
-            }
-            else
-            {
-                result = new FileInfo(Path.GetTempFileName());
-            }
-            return result;
         }
 
         protected override void DisposeUnmanagedObjects()
@@ -70,6 +51,9 @@ namespace Ease.Util.Temp.Memory
         }
     }
 
+    /// <summary>
+    /// Implementation of <see cref="ScopedTempFile"/> backed by local filesystem files.
+    /// </summary>
     public class LocalScopedTempFile : ScopedTempFile
     {
         private readonly FileInfo _fileInfo;

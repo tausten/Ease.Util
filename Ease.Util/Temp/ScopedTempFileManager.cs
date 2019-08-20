@@ -10,16 +10,44 @@ using System.Linq;
 namespace Ease.Util.Temp
 {
     /// <summary>
-    /// Abstraction of a manager of temporary file objects. All managed temporary file objects will be deleted / released
+    /// Abstraction of a manager of temporary files. All managed temporary file objects will be deleted / released
     /// on `Dispose()` of the manager (provided no locking or other exceptions prevent such deletion -- the cleanup
-    /// is best-effort).
+    /// is best-effort). Sample usage:
+    /// 
+    /// <code>
+    /// IScopedTempFileManager manager; // Concrete implementation obtained somehow
+    /// using (manager)
+    /// {
+    ///     var first = manager.New();
+    ///     using (var writer = new StreamWriter(first.OpenWrite()))
+    ///     {
+    ///         writer.Write("Stuff to store in temp file");
+    ///     }
+    ///     // ... things happen
+    ///     // Maybe we need to read the file back now...
+    ///     using (var reader = new StreamReader(first.OpenRead())
+    ///     {
+    ///         var contents = reader.ReadToEnd();
+    ///     }
+    ///     // ... maybe we need another different temp file...
+    ///     var second = manager.New();
+    ///     // ... do stuff with the other file...
+    /// }
+    /// // ... at this point, all temp files are cleaned up
+    /// </code>
+    /// 
+    /// That same logic applies whether the temp files are backed by an in-memory store, local filesystem, 
+    /// or any other concrete implementation (eg. AWS S3, Azure storage, DropBox, etc...). Default implementations
+    /// for in-memory (<see cref="Memory.MemoryScopedTempFileManager"/>) and local filesystem
+    /// (<see cref="Local.LocalScopedTempFileManager"/>) are in this package. Other concrete implementations 
+    /// may be implemented in other packages to avoid introducing excessive dependencies.
     /// </summary>
     public interface IScopedTempFileManager : IDisposable
     {
         /// <summary>
         /// Allocate a new <see cref="IScopedTempFile"/>.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The newly allocated <see cref="IScopedTempFile"/></returns>
         IScopedTempFile New();
     }
 

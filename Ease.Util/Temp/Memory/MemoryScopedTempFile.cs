@@ -6,6 +6,10 @@ using System.IO;
 
 namespace Ease.Util.Temp.Memory
 {
+    /// <summary>
+    /// Implementation of <see cref="IScopedTempFileManager"/> as an in-memory store. Can be useful as a low latency 
+    /// scratch pad in a test context or when HD temp space is particularly slow.
+    /// </summary>
     public class MemoryScopedTempFileManager : ScopedTempFileManager
     {
         protected override ScopedTempFile AllocateFile()
@@ -14,6 +18,9 @@ namespace Ease.Util.Temp.Memory
         }
     }
 
+    /// <summary>
+    /// Implementation of <see cref="ScopedTempFile"/> backed by `MemoryStream`.
+    /// </summary>
     public class MemoryScopedTempFile : ScopedTempFile
     {
         private class DeferredDisposeMemoryStream : MemoryStream

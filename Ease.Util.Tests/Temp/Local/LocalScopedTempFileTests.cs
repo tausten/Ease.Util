@@ -3,7 +3,7 @@
 //
 
 using System.IO;
-using Ease.Util.Temp.Memory;
+using Ease.Util.Temp.Local;
 using FluentAssertions;
 using NUnit.Framework;
 

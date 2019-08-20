@@ -33,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Disposably.SafeDisposableWithFinalizer.html",
-          "hash": "hnsw9olpjufHNx/l0IszzQ=="
+          "hash": "Y3oYiUAoHNG7d1d6MRFMqg=="
         }
       },
       "is_incremental": false,
@@ -77,6 +77,30 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Ease.Util.Extensions.AssemblyExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ease.Util.Extensions.AssemblyExtensions.html",
+          "hash": "cK//0gT+QXOq2bFOkgyE3g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ease.Util.Extensions.DirectoryInfoExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ease.Util.Extensions.DirectoryInfoExtensions.html",
+          "hash": "HiQgbtuPXiwdUbl/Sx/23A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Ease.Util.Extensions.StringExtensions.yml",
       "output": {
         ".html": {
@@ -93,7 +117,139 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Extensions.html",
-          "hash": "1DJvq+08XzEZoKFGMVuZPQ=="
+          "hash": "xYxAOG9u5DOqYXGCAasj1A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ease.Util.Temp.IScopedTempFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ease.Util.Temp.IScopedTempFile.html",
+          "hash": "4T8GQy6nVwOFOf7ZPtK0gQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ease.Util.Temp.IScopedTempFileManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ease.Util.Temp.IScopedTempFileManager.html",
+          "hash": "mDUri983FUQSXFpPnobM6w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ease.Util.Temp.Local.LocalScopedTempFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ease.Util.Temp.Local.LocalScopedTempFile.html",
+          "hash": "oVOnfMSmjf2XEPpigfrxSg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ease.Util.Temp.Local.LocalScopedTempFileManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ease.Util.Temp.Local.LocalScopedTempFileManager.html",
+          "hash": "jkHHoKrObdXcYTUbZrVy8w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ease.Util.Temp.Local.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ease.Util.Temp.Local.html",
+          "hash": "uRy7FDnuLkadSeT8xzq/ng=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ease.Util.Temp.Memory.MemoryScopedTempFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ease.Util.Temp.Memory.MemoryScopedTempFile.html",
+          "hash": "S1qa4oUCoDGdNY/om2v9pQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ease.Util.Temp.Memory.MemoryScopedTempFileManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ease.Util.Temp.Memory.MemoryScopedTempFileManager.html",
+          "hash": "Yq/9ZeN8eNXcw9w0eE7dfA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ease.Util.Temp.Memory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ease.Util.Temp.Memory.html",
+          "hash": "P10rikiaXRnbvYBf/Czkjw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ease.Util.Temp.ScopedTempFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ease.Util.Temp.ScopedTempFile.html",
+          "hash": "+uxucfi476Hl8r+5p3N2rg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ease.Util.Temp.ScopedTempFileManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ease.Util.Temp.ScopedTempFileManager.html",
+          "hash": "kvmGawxqWO/q2VjOXwKM1g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ease.Util.Temp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ease.Util.Temp.html",
+          "hash": "9eO3t243uzkSTKqzRJkw5Q=="
         }
       },
       "is_incremental": false,
@@ -117,7 +273,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "znuveO9JgFR9l5QGe5tiIQ=="
+          "hash": "OBN0awLXpjkGbg0eKbJunw=="
         }
       },
       "is_incremental": false,
@@ -204,7 +360,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 8,
+          "total_file_count": 21,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

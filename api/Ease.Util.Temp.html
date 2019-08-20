@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Namespace Ease.Util.Extensions
+    <title>Namespace Ease.Util.Temp
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Namespace Ease.Util.Extensions
+    <meta name="title" content="Namespace Ease.Util.Temp
    ">
     <meta name="generator" content="docfx 2.44.0.0">
     
@@ -68,21 +68,57 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Ease.Util.Extensions">
+            <article class="content wrap" id="_content" data-uid="Ease.Util.Temp">
   
-  <h1 id="Ease_Util_Extensions" data-uid="Ease.Util.Extensions" class="text-break">Namespace Ease.Util.Extensions
+  <h1 id="Ease_Util_Temp" data-uid="Ease.Util.Temp" class="text-break">Namespace Ease.Util.Temp
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
-      <h4><a class="xref" href="Ease.Util.Extensions.AssemblyExtensions.html">AssemblyExtensions</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Ease.Util.Extensions.DirectoryInfoExtensions.html">DirectoryInfoExtensions</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Ease.Util.Extensions.StringExtensions.html">StringExtensions</a></h4>
-      <section><p>Extension methods for the <span class="xref">System.String</span> class.</p>
+      <h4><a class="xref" href="Ease.Util.Temp.ScopedTempFile.html">ScopedTempFile</a></h4>
+      <section><p>Base class for <a class="xref" href="Ease.Util.Temp.IScopedTempFile.html">IScopedTempFile</a> implementations.</p>
+</section>
+      <h4><a class="xref" href="Ease.Util.Temp.ScopedTempFileManager.html">ScopedTempFileManager</a></h4>
+      <section><p>Base class for <a class="xref" href="Ease.Util.Temp.IScopedTempFileManager.html">IScopedTempFileManager</a> implementations.</p>
+</section>
+    <h3 id="interfaces">Interfaces
+  </h3>
+      <h4><a class="xref" href="Ease.Util.Temp.IScopedTempFile.html">IScopedTempFile</a></h4>
+      <section><p>Abstraction of a temporary file tied to a scope managed by <a class="xref" href="Ease.Util.Temp.IScopedTempFileManager.html">IScopedTempFileManager</a>.
+Explicit call to <code>Dispose()</code> will delete the file immediately, otherwise the file will be deleted
+when the owning <a class="xref" href="Ease.Util.Temp.IScopedTempFileManager.html">IScopedTempFileManager</a>'s <code>Dispose()</code> is called. This file may then
+be written to, read, appended, etc... as needed within the lifetime of the manager.</p>
+</section>
+      <h4><a class="xref" href="Ease.Util.Temp.IScopedTempFileManager.html">IScopedTempFileManager</a></h4>
+      <section><p>Abstraction of a manager of temporary files. All managed temporary file objects will be deleted / released
+on <code>Dispose()</code> of the manager (provided no locking or other exceptions prevent such deletion -- the cleanup
+is best-effort). Sample usage:</p>
+<pre><code>IScopedTempFileManager manager; // Concrete implementation obtained somehow
+using (manager)
+{
+    var first = manager.New();
+    using (var writer = new StreamWriter(first.OpenWrite()))
+    {
+        writer.Write(&quot;Stuff to store in temp file&quot;);
+    }
+    // ... things happen
+    // Maybe we need to read the file back now...
+    using (var reader = new StreamReader(first.OpenRead())
+    {
+        var contents = reader.ReadToEnd();
+    }
+    // ... maybe we need another different temp file...
+    var second = manager.New();
+    // ... do stuff with the other file...
+}
+// ... at this point, all temp files are cleaned up</code></pre>
+<p>That same logic applies whether the temp files are backed by an in-memory store, local filesystem,
+or any other concrete implementation (eg. AWS S3, Azure storage, DropBox, etc...). Default implementations
+for in-memory (<a class="xref" href="Ease.Util.Temp.Memory.MemoryScopedTempFileManager.html">MemoryScopedTempFileManager</a>) and local filesystem
+(<a class="xref" href="Ease.Util.Temp.Local.LocalScopedTempFileManager.html">LocalScopedTempFileManager</a>) are in this package. Other concrete implementations
+may be implemented in other packages to avoid introducing excessive dependencies.</p>
 </section>
 </article>
           </div>

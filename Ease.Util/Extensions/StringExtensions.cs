@@ -44,7 +44,23 @@ namespace Ease.Util.Extensions
                 {
                     // Handle Nullable types by getting the underlying for conversion.
                     var underlyingType = Nullable.GetUnderlyingType(typeof(T)) ?? typeof(T);
-                    result = (T)Convert.ChangeType(theString, underlyingType, formatProvider ?? CultureInfo.InvariantCulture);
+                    if (underlyingType.IsEnum)
+                    {
+                        result = (T)Enum.Parse(underlyingType, theString);
+                    }
+                    // Work around the fact C# doesn't support "specialization" of generics in a consistent manner
+                    // See: https://stackoverflow.com/questions/600978/how-to-do-template-specialization-in-c-sharp
+                    // (otherwise, I'd just create a specialized version of the method for TimeSpan...)
+                    else if (typeof(TimeSpan) == underlyingType)
+                    {
+                        var tsResult = TimeSpan.Parse(theString, formatProvider);
+                        // Have to go indirectly via Convert.ChangeType(...) to make compiler happy here.
+                        result = (T)Convert.ChangeType(tsResult, underlyingType);
+                    }
+                    else
+                    {
+                        result = (T)Convert.ChangeType(theString, underlyingType, formatProvider ?? CultureInfo.InvariantCulture);
+                    }
                 }
             }
             catch

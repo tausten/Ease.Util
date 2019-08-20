@@ -23,4 +23,8 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Temp\LocalFilesystem\" />
+  </ItemGroup>
+
 </Project>

@@ -2,10 +2,7 @@
 // Copyright (c) 2019 Tyler Austen. See LICENSE file at top of repository for details.
 //
 
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text;
 
 namespace Ease.Util.Temp.Memory
 {
@@ -19,27 +16,44 @@ namespace Ease.Util.Temp.Memory
 
     public class MemoryScopedTempFile : ScopedTempFile
     {
-        private readonly MemoryStream _file = new MemoryStream();
+        private class DeferredDisposeMemoryStream : MemoryStream
+        {
+            private bool _isDisposing = true;
+            protected override void Dispose(bool disposing)
+            {
+                _isDisposing = disposing;
+                // Intentionally do nothing at this point
+            }
+
+            public void DeferredDispose()
+            {
+                base.Dispose(_isDisposing);
+            }
+        }
+        private readonly DeferredDisposeMemoryStream _file = new DeferredDisposeMemoryStream();
 
         public override Stream OpenAppend()
         {
-            throw new NotImplementedException();
+            _file.Seek(0, SeekOrigin.End);
+            return _file;
         }
 
         public override Stream OpenRead()
         {
-            throw new NotImplementedException();
+            _file.Seek(0, SeekOrigin.Begin);
+            return _file;
         }
 
         public override Stream OpenWrite()
         {
-            throw new NotImplementedException();
+            _file.SetLength(0);
+            return _file;
         }
 
         protected override void DisposeManagedObjects()
         {
             base.DisposeManagedObjects();
-            _file.Dispose();
+            _file.DeferredDispose();
         }
     }
 }

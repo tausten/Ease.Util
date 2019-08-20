@@ -33,8 +33,4 @@
     <ProjectReference Include="..\Ease.Util\Ease.Util.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Temp\Memory\" />
-  </ItemGroup>
-
 </Project>

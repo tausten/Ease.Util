@@ -14,6 +14,32 @@ namespace Ease.Util.Tests.Extensions
 {
     class StringExtensionsTests
     {
+        public enum SomeEnumType
+        {
+            Undefined = 0,
+            First,
+            Second,
+            Jump = 123,
+            AfterJump
+        }
+
+        [Flags]
+        public enum SomeFlagEnumType
+        {
+            Undefined = 0x0,
+            HasCarbon = 0x01,
+            HasHydrogen = 0x02,
+            HasOxygen = 0x04,
+
+            IsOrganic = HasCarbon | HasHydrogen | HasOxygen,
+
+            IsLiving = 0x10 | IsOrganic,
+            IsPlant = 0x20 | IsLiving,
+            IsAnimal = 0x40 | IsLiving
+
+            // Yes.. this makes for some interesting possibilities around Plant-Animals..  ;-)
+        }
+
         public enum InputMode
         {
             Null,
@@ -58,6 +84,10 @@ namespace Ease.Util.Tests.Extensions
         [TestCase((double)12.345, InputMode.Empty)]
         [TestCase((double)12.345, InputMode.WhiteSpace)]
         [TestCase((double)12.345, InputMode.Unparsable)]
+        [TestCase(SomeEnumType.Jump, InputMode.Null)]
+        [TestCase(SomeEnumType.Undefined, InputMode.Empty)]
+        [TestCase(SomeEnumType.AfterJump, InputMode.WhiteSpace)]
+        [TestCase(SomeEnumType.First, InputMode.Unparsable)]
         public void ToValueOr_Returns_Default<T>(T defaultValue, InputMode inputMode)
         {
             // Arrange
@@ -214,6 +244,15 @@ namespace Ease.Util.Tests.Extensions
         {
             ToValueOr_Returns_Default((DateTime?)new DateTime(2019, 8, 10, 14, 35, 46, DateTimeKind.Utc), inputMode);
         }
+
+        [TestCase(SomeEnumType.Jump, InputMode.Null)]
+        [TestCase(SomeEnumType.Undefined, InputMode.Empty)]
+        [TestCase(SomeEnumType.AfterJump, InputMode.WhiteSpace)]
+        [TestCase(SomeEnumType.First, InputMode.Unparsable)]
+        public void ToValueOr_Returns_Default_Nullable_Enum(SomeEnumType expectedDefault, InputMode inputMode)
+        {
+            ToValueOr_Returns_Default((SomeEnumType?)expectedDefault, inputMode);
+        }
         #endregion
 
         public enum FormatProviderMode
@@ -279,6 +318,11 @@ namespace Ease.Util.Tests.Extensions
         [TestCase((double)12.345, FormatProviderMode.EnCA)]
         [TestCase((double)12.345, FormatProviderMode.EsES)]
         [TestCase((double)12.345, FormatProviderMode.KoKR)]
+        [TestCase(SomeEnumType.Jump, FormatProviderMode.Invariant)]
+        [TestCase(SomeEnumType.Undefined, FormatProviderMode.FrFR)]
+        [TestCase(SomeEnumType.AfterJump, FormatProviderMode.EnCA)]
+        [TestCase(SomeEnumType.First, FormatProviderMode.EsES)]
+        [TestCase(SomeEnumType.Second, FormatProviderMode.KoKR)]
         public void ToValueOr_Converts_Value_From_ToString<T>(T expectedValue, FormatProviderMode formatProviderMode)
         {
             // Arrange
@@ -291,7 +335,7 @@ namespace Ease.Util.Tests.Extensions
             }
 
             // Act
-            var result = input.ToValueOr(default(T), targetProvider);
+            var result = input.ToValueOr((T)default, targetProvider);
 
             // Assert
             result.Should().Be(expectedValue);
@@ -305,6 +349,26 @@ namespace Ease.Util.Tests.Extensions
         public void ToValueOr_Converts_Value_From_ToString_decimal(FormatProviderMode formatProviderMode)
         {
             ToValueOr_Converts_Value_From_ToString((decimal)12.345, formatProviderMode);
+        }
+
+        [TestCase(FormatProviderMode.Invariant)]
+        [TestCase(FormatProviderMode.FrFR)]
+        [TestCase(FormatProviderMode.EnCA)]
+        [TestCase(FormatProviderMode.EsES)]
+        [TestCase(FormatProviderMode.KoKR)]
+        public void ToValueOr_Converts_Value_From_ToString_TimeSpan(FormatProviderMode formatProviderMode)
+        {
+            ToValueOr_Converts_Value_From_ToString(TimeSpan.FromMinutes(365), formatProviderMode);
+        }
+
+        [TestCase(FormatProviderMode.Invariant)]
+        [TestCase(FormatProviderMode.FrFR)]
+        [TestCase(FormatProviderMode.EnCA)]
+        [TestCase(FormatProviderMode.EsES)]
+        [TestCase(FormatProviderMode.KoKR)]
+        public void ToValueOr_Converts_Value_From_ToString_DateTime(FormatProviderMode formatProviderMode)
+        {
+            ToValueOr_Converts_Value_From_ToString(new DateTime(2019, 8, 10, 14, 35, 46, DateTimeKind.Utc), formatProviderMode);
         }
 
         #region Value From ToString for non-primitave types
@@ -400,6 +464,41 @@ namespace Ease.Util.Tests.Extensions
         {
             ToValueOr_Converts_Value_From_ToString((double?)12.345, formatProviderMode);
         }
+
+        [TestCase(FormatProviderMode.Invariant)]
+        [TestCase(FormatProviderMode.FrFR)]
+        [TestCase(FormatProviderMode.EnCA)]
+        [TestCase(FormatProviderMode.EsES)]
+        [TestCase(FormatProviderMode.KoKR)]
+        public void ToValueOr_Converts_Value_From_ToString_Nullable_TimeSpan(FormatProviderMode formatProviderMode)
+        {
+            ToValueOr_Converts_Value_From_ToString((TimeSpan?)TimeSpan.FromMinutes(365), formatProviderMode);
+        }
+
+        [TestCase(FormatProviderMode.Invariant)]
+        [TestCase(FormatProviderMode.FrFR)]
+        [TestCase(FormatProviderMode.EnCA)]
+        [TestCase(FormatProviderMode.EsES)]
+        [TestCase(FormatProviderMode.KoKR)]
+        public void ToValueOr_Converts_Value_From_ToString_Nullable_DateTime(FormatProviderMode formatProviderMode)
+        {
+            ToValueOr_Converts_Value_From_ToString((DateTime?)new DateTime(2019, 8, 10, 14, 35, 46, DateTimeKind.Utc), formatProviderMode);
+        }
         #endregion
+
+        [TestCase("HasCarbon, HasHydrogen, HasOxygen", SomeFlagEnumType.IsOrganic)]
+        [TestCase("IsOrganic", SomeFlagEnumType.HasCarbon | SomeFlagEnumType.HasHydrogen | SomeFlagEnumType.HasOxygen)]
+        [TestCase("HasCarbon, HasHydrogen", SomeFlagEnumType.HasCarbon | SomeFlagEnumType.HasHydrogen)]
+        [TestCase("IsAnimal", SomeFlagEnumType.IsAnimal)]
+        public void ToValueOr_Converts_Value_From<T>(string input, T expectedValue)
+        {
+            // Arrange
+            // Act
+            var result = input.ToValueOr((T)default);
+
+            // Assert
+            result.Should().Be(expectedValue);
+        }
+
     }
 }

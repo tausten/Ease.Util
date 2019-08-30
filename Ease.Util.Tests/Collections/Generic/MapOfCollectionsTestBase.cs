@@ -23,7 +23,6 @@ namespace Ease.Util.Tests.Collections.Generic
         protected abstract TKey SecondaryCollectionKey { get; }
         protected abstract TValue SecondaryCollectionValue { get; }
 
-
         [Test]
         public void Indexer_Returns_Empty_Collection()
         {

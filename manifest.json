@@ -5,11 +5,71 @@
   "files": [
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Ease.Util.Collections.Generic.MapOfCollections-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ease.Util.Collections.Generic.MapOfCollections-3.html",
+          "hash": "dvyzAIuHnscDXhEWohU5Nw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ease.Util.Collections.Generic.MapOfConcreteCollections-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ease.Util.Collections.Generic.MapOfConcreteCollections-3.html",
+          "hash": "Pz7JJfi2DKHDDTcRSJnS6w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ease.Util.Collections.Generic.MapOfHashSets-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ease.Util.Collections.Generic.MapOfHashSets-2.html",
+          "hash": "PC1BKXDjcXNc4n4zKKwYtA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ease.Util.Collections.Generic.MapOfLists-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ease.Util.Collections.Generic.MapOfLists-2.html",
+          "hash": "mqpQQzIWTkr2MgkY+6ljJg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ease.Util.Collections.Generic.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ease.Util.Collections.Generic.html",
+          "hash": "DpZbdoqE/8BSu+Yi+09ONw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Ease.Util.Disposably.FactoryScoped-1.yml",
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Disposably.FactoryScoped-1.html",
-          "hash": "eV/aMhv29hh9swpSlrK9pA=="
+          "hash": "UOBsIG6tclc49jEN1m9Ldw=="
         }
       },
       "is_incremental": false,
@@ -21,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Disposably.SafeDisposable.html",
-          "hash": "svN61nMIqRmLwIckPRgxpQ=="
+          "hash": "gU+XJik7UDjVvKrcUIk5tw=="
         }
       },
       "is_incremental": false,
@@ -33,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Disposably.SafeDisposableWithFinalizer.html",
-          "hash": "Y3oYiUAoHNG7d1d6MRFMqg=="
+          "hash": "szutGd1Zbq2QsVqxtSyrHg=="
         }
       },
       "is_incremental": false,
@@ -45,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Disposably.Scoped.html",
-          "hash": "tFnlxdxhvyET+cegpef5mw=="
+          "hash": "/evkmugYy2FuQmBnBn/vlg=="
         }
       },
       "is_incremental": false,
@@ -57,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Disposably.ScopedLock.html",
-          "hash": "uwRXGurqrmoygh4dH/xHkA=="
+          "hash": "4OoIEZWBMPetjp7wWi5lFg=="
         }
       },
       "is_incremental": false,
@@ -69,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Disposably.html",
-          "hash": "dTenKVLJH8Z58ZMDWINXfA=="
+          "hash": "8S5lfdEJGEeYDb1G+ICHAQ=="
         }
       },
       "is_incremental": false,
@@ -81,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Extensions.AssemblyExtensions.html",
-          "hash": "cK//0gT+QXOq2bFOkgyE3g=="
+          "hash": "/09pKDBZvRgb+ZCy/NEPyA=="
         }
       },
       "is_incremental": false,
@@ -93,7 +153,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Extensions.DirectoryInfoExtensions.html",
-          "hash": "HiQgbtuPXiwdUbl/Sx/23A=="
+          "hash": "MfCdUyIKEjnoOOU7d0tu+g=="
         }
       },
       "is_incremental": false,
@@ -105,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Extensions.StringExtensions.html",
-          "hash": "lZ7Po9w+siuKroIjFagjQA=="
+          "hash": "en+9qTVOzLBGQPIO7gPfsg=="
         }
       },
       "is_incremental": false,
@@ -117,7 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Extensions.html",
-          "hash": "xYxAOG9u5DOqYXGCAasj1A=="
+          "hash": "J+zFLCqo+N2ld2iiHNOT9A=="
         }
       },
       "is_incremental": false,
@@ -129,7 +189,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Temp.IScopedTempFile.html",
-          "hash": "4T8GQy6nVwOFOf7ZPtK0gQ=="
+          "hash": "AyT2G93wZ9IIAqDzlwgt3g=="
         }
       },
       "is_incremental": false,
@@ -141,7 +201,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Temp.IScopedTempFileManager.html",
-          "hash": "mDUri983FUQSXFpPnobM6w=="
+          "hash": "a+yBs2CiHP2EJPf6WWrY3Q=="
         }
       },
       "is_incremental": false,
@@ -153,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Temp.Local.LocalScopedTempFile.html",
-          "hash": "oVOnfMSmjf2XEPpigfrxSg=="
+          "hash": "jH0S8/b7ojPP92El4YGkEQ=="
         }
       },
       "is_incremental": false,
@@ -165,7 +225,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Temp.Local.LocalScopedTempFileManager.html",
-          "hash": "jkHHoKrObdXcYTUbZrVy8w=="
+          "hash": "IpYHtXB5X6nOyM6Z2r5nhA=="
         }
       },
       "is_incremental": false,
@@ -177,7 +237,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Temp.Local.html",
-          "hash": "uRy7FDnuLkadSeT8xzq/ng=="
+          "hash": "NIetb3xrJDIVQFDcuTNvIQ=="
         }
       },
       "is_incremental": false,
@@ -189,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Temp.Memory.MemoryScopedTempFile.html",
-          "hash": "S1qa4oUCoDGdNY/om2v9pQ=="
+          "hash": "IXk42RLB+FOg2ZsIoKhWlw=="
         }
       },
       "is_incremental": false,
@@ -201,7 +261,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Temp.Memory.MemoryScopedTempFileManager.html",
-          "hash": "Yq/9ZeN8eNXcw9w0eE7dfA=="
+          "hash": "yrUooZVO2l2OKCHcFRyPig=="
         }
       },
       "is_incremental": false,
@@ -213,7 +273,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Temp.Memory.html",
-          "hash": "P10rikiaXRnbvYBf/Czkjw=="
+          "hash": "3nXV0uK7hRTaJvpWwDn2Yw=="
         }
       },
       "is_incremental": false,
@@ -225,7 +285,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Temp.ScopedTempFile.html",
-          "hash": "+uxucfi476Hl8r+5p3N2rg=="
+          "hash": "0pvxyrbhznXpxNGXGA5N8w=="
         }
       },
       "is_incremental": false,
@@ -237,7 +297,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Temp.ScopedTempFileManager.html",
-          "hash": "kvmGawxqWO/q2VjOXwKM1g=="
+          "hash": "dZu9U6EiVPRFOGiXsOY60w=="
         }
       },
       "is_incremental": false,
@@ -249,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Temp.html",
-          "hash": "9eO3t243uzkSTKqzRJkw5Q=="
+          "hash": "H+y2xkaXwjTm7WzjefbOog=="
         }
       },
       "is_incremental": false,
@@ -261,7 +321,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "BBjp0utHR/vjurPmIrVvlQ=="
+          "hash": "0yOufn1Ix6Mye8fpi9fkiQ=="
         }
       },
       "is_incremental": false,
@@ -273,7 +333,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "OBN0awLXpjkGbg0eKbJunw=="
+          "hash": "MmrcQ/1mCEKmdhWJMYOecw=="
         }
       },
       "is_incremental": false,
@@ -285,7 +345,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/disposably.html",
-          "hash": "NlGrRJBNU7wKDNG6JoVM8A=="
+          "hash": "VQP6kth6uCkoaGb/9mV2Dw=="
         }
       },
       "is_incremental": false,
@@ -297,7 +357,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "ZVts/YwxfGie5UfaHXcD3Q=="
+          "hash": "xiq6i9GZ7dApqOZ4jM2/BQ=="
         }
       },
       "is_incremental": false,
@@ -321,7 +381,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "FmMH5Tbq8NWpFJbPaproCA=="
+          "hash": "QYD8+YQSLiRtB3cALSvaEA=="
         }
       },
       "is_incremental": false,
@@ -360,7 +420,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 21,
+          "total_file_count": 26,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

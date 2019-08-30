@@ -1,0 +1,504 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class MapOfCollections&lt;TKey, TCollection, TValue&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class MapOfCollections&lt;TKey, TCollection, TValue&gt;
+   ">
+    <meta name="generator" content="docfx 2.45.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Ease.Util.Collections.Generic.MapOfCollections`3">
+  
+  
+  <h1 id="Ease_Util_Collections_Generic_MapOfCollections_3" data-uid="Ease.Util.Collections.Generic.MapOfCollections`3" class="text-break">Class MapOfCollections&lt;TKey, TCollection, TValue&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>A mapping of keys to a collection of values. Takes care of ensuring that an empty collection is present,
+avoiding need for null checks and collection initialization per key prior to use. Eg:</p>
+<pre><code>var families = new MapOfCollections&lt;string, HashSet&lt;string>, string>();
+families[&quot;Doe&quot;].Add(&quot;Jane&quot;);
+families[&quot;Doe&quot;].Add(&quot;John&quot;);
+var theDoes = string.Join(&quot;, &quot;, families[&quot;Doe&quot;]);</code></pre>
+<p>See <a class="xref" href="Ease.Util.Collections.Generic.MapOfHashSets-2.html">MapOfHashSets&lt;TKey, TValue&gt;</a> and <a class="xref" href="Ease.Util.Collections.Generic.MapOfLists-2.html">MapOfLists&lt;TKey, TValue&gt;</a> for convenient simplification for
+common some cases.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">MapOfCollections&lt;TKey, TCollection, TValue&gt;</span></div>
+      <div class="level2"><a class="xref" href="Ease.Util.Collections.Generic.MapOfConcreteCollections-3.html">MapOfConcreteCollections&lt;TKey, TCollection, TValue&gt;</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Ease.Util.Collections.Generic.html">Ease.Util.Collections.Generic</a></h6>
+  <h6><strong>Assembly</strong>: Ease.Util.dll</h6>
+  <h5 id="Ease_Util_Collections_Generic_MapOfCollections_3_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class MapOfCollections&lt;TKey, TCollection, TValue&gt;</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td><p>The lookup key type.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TCollection</span></td>
+        <td><p>The collection type to store the values in per key.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>The value type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/tausten/Ease.Util/new/develop/apiSpec/new?filename=Ease_Util_Collections_Generic_MapOfCollections_3__ctor_System_Func__1__System_Action__1__2__System_Action__1__2__.md&amp;value=---%0Auid%3A%20Ease.Util.Collections.Generic.MapOfCollections%603.%23ctor(System.Func%7B%601%7D%2CSystem.Action%7B%601%2C%602%7D%2CSystem.Action%7B%601%2C%602%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/tausten/Ease.Util/blob/develop/Ease.Util/Collections/Generic/MapOfCollections.cs/#L44">View Source</a>
+  </span>
+  <a id="Ease_Util_Collections_Generic_MapOfCollections_3__ctor_" data-uid="Ease.Util.Collections.Generic.MapOfCollections`3.#ctor*"></a>
+  <h4 id="Ease_Util_Collections_Generic_MapOfCollections_3__ctor_System_Func__1__System_Action__1__2__System_Action__1__2__" data-uid="Ease.Util.Collections.Generic.MapOfCollections`3.#ctor(System.Func{`1},System.Action{`1,`2},System.Action{`1,`2})">MapOfCollections(Func&lt;TCollection&gt;, Action&lt;TCollection, TValue&gt;, Action&lt;TCollection, TValue&gt;)</h4>
+  <div class="markdown level1 summary"><p>Allocates a new instance.</p>
+<p>NOTE: It is recommended that you either inherit and override the <a class="xref" href="Ease.Util.Collections.Generic.MapOfCollections-3.html#Ease_Util_Collections_Generic_MapOfCollections_3_NewCollection">NewCollection()</a>, <a class="xref" href="Ease.Util.Collections.Generic.MapOfCollections-3.html#Ease_Util_Collections_Generic_MapOfCollections_3_AddValueTo__1__2_">AddValueTo(TCollection, TValue)</a>,
+and <a class="xref" href="Ease.Util.Collections.Generic.MapOfCollections-3.html#Ease_Util_Collections_Generic_MapOfCollections_3_Remove__0__2_">Remove(TKey, TValue)</a> methods <em>or</em> provide the implementations via the optional constructor parameters, but
+avoid mixing the approaches.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MapOfCollections(Func&lt;TCollection&gt; allocateNewCollection = null, Action&lt;TCollection, TValue&gt; addValueToCollection = null, Action&lt;TCollection, TValue&gt; removeValueFromCollection = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;TCollection&gt;</td>
+        <td><span class="parametername">allocateNewCollection</span></td>
+        <td><p>[optional] Method for allocating a new instance of the collection being mapped to.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;TCollection, TValue&gt;</td>
+        <td><span class="parametername">addValueToCollection</span></td>
+        <td><p>[optional] Method for adding an item to the mapped-to collections.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;TCollection, TValue&gt;</td>
+        <td><span class="parametername">removeValueFromCollection</span></td>
+        <td><p>[optional] Method for removing an item from the mapped-to collections.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/tausten/Ease.Util/new/develop/apiSpec/new?filename=Ease_Util_Collections_Generic_MapOfCollections_3_Item__0_.md&amp;value=---%0Auid%3A%20Ease.Util.Collections.Generic.MapOfCollections%603.Item(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/tausten/Ease.Util/blob/develop/Ease.Util/Collections/Generic/MapOfCollections.cs/#L136">View Source</a>
+  </span>
+  <a id="Ease_Util_Collections_Generic_MapOfCollections_3_Item_" data-uid="Ease.Util.Collections.Generic.MapOfCollections`3.Item*"></a>
+  <h4 id="Ease_Util_Collections_Generic_MapOfCollections_3_Item__0_" data-uid="Ease.Util.Collections.Generic.MapOfCollections`3.Item(`0)">Item[TKey]</h4>
+  <div class="markdown level1 summary"><p>Access the collection at the specified <code data-dev-comment-type="paramref" class="paramref">key</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TCollection this[TKey key] { get; }</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The key for selecting the desired collection.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TCollection</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/tausten/Ease.Util/new/develop/apiSpec/new?filename=Ease_Util_Collections_Generic_MapOfCollections_3_Add__0__2_.md&amp;value=---%0Auid%3A%20Ease.Util.Collections.Generic.MapOfCollections%603.Add(%600%2C%602)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/tausten/Ease.Util/blob/develop/Ease.Util/Collections/Generic/MapOfCollections.cs/#L113">View Source</a>
+  </span>
+  <a id="Ease_Util_Collections_Generic_MapOfCollections_3_Add_" data-uid="Ease.Util.Collections.Generic.MapOfCollections`3.Add*"></a>
+  <h4 id="Ease_Util_Collections_Generic_MapOfCollections_3_Add__0__2_" data-uid="Ease.Util.Collections.Generic.MapOfCollections`3.Add(`0,`2)">Add(TKey, TValue)</h4>
+  <div class="markdown level1 summary"><p>Add a value to the collection at <code data-dev-comment-type="paramref" class="paramref">key</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Add(TKey key, TValue value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The key for selecting the appropriate collection to which the <code data-dev-comment-type="paramref" class="paramref">value</code> will be added.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value to add to the collection.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/tausten/Ease.Util/new/develop/apiSpec/new?filename=Ease_Util_Collections_Generic_MapOfCollections_3_AddValueTo__1__2_.md&amp;value=---%0Auid%3A%20Ease.Util.Collections.Generic.MapOfCollections%603.AddValueTo(%601%2C%602)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/tausten/Ease.Util/blob/develop/Ease.Util/Collections/Generic/MapOfCollections.cs/#L74">View Source</a>
+  </span>
+  <a id="Ease_Util_Collections_Generic_MapOfCollections_3_AddValueTo_" data-uid="Ease.Util.Collections.Generic.MapOfCollections`3.AddValueTo*"></a>
+  <h4 id="Ease_Util_Collections_Generic_MapOfCollections_3_AddValueTo__1__2_" data-uid="Ease.Util.Collections.Generic.MapOfCollections`3.AddValueTo(`1,`2)">AddValueTo(TCollection, TValue)</h4>
+  <div class="markdown level1 summary"><p>Override to provide implementation for adding a value to an instance of <code data-dev-comment-type="typeparamref" class="typeparamref">TCollection</code>, otherwise
+the constructor-provided <code>addItemToCollection</code> will be used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void AddValueTo(TCollection coll, TValue value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TCollection</span></td>
+        <td><span class="parametername">coll</span></td>
+        <td><p>The collection to which the value should be added.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value to add.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/tausten/Ease.Util/new/develop/apiSpec/new?filename=Ease_Util_Collections_Generic_MapOfCollections_3_Clear.md&amp;value=---%0Auid%3A%20Ease.Util.Collections.Generic.MapOfCollections%603.Clear%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/tausten/Ease.Util/blob/develop/Ease.Util/Collections/Generic/MapOfCollections.cs/#L144">View Source</a>
+  </span>
+  <a id="Ease_Util_Collections_Generic_MapOfCollections_3_Clear_" data-uid="Ease.Util.Collections.Generic.MapOfCollections`3.Clear*"></a>
+  <h4 id="Ease_Util_Collections_Generic_MapOfCollections_3_Clear" data-uid="Ease.Util.Collections.Generic.MapOfCollections`3.Clear">Clear()</h4>
+  <div class="markdown level1 summary"><p>Clears the map.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Clear()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/tausten/Ease.Util/new/develop/apiSpec/new?filename=Ease_Util_Collections_Generic_MapOfCollections_3_NewCollection.md&amp;value=---%0Auid%3A%20Ease.Util.Collections.Generic.MapOfCollections%603.NewCollection%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/tausten/Ease.Util/blob/develop/Ease.Util/Collections/Generic/MapOfCollections.cs/#L59">View Source</a>
+  </span>
+  <a id="Ease_Util_Collections_Generic_MapOfCollections_3_NewCollection_" data-uid="Ease.Util.Collections.Generic.MapOfCollections`3.NewCollection*"></a>
+  <h4 id="Ease_Util_Collections_Generic_MapOfCollections_3_NewCollection" data-uid="Ease.Util.Collections.Generic.MapOfCollections`3.NewCollection">NewCollection()</h4>
+  <div class="markdown level1 summary"><p>Override to provide implementation for allocating a new instance of <code data-dev-comment-type="typeparamref" class="typeparamref">TCollection</code>, otherwise
+the constructor-provided <code>allocateNewCollection</code> will be used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual TCollection NewCollection()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TCollection</span></td>
+        <td><p>A new instance of <code data-dev-comment-type="typeparamref" class="typeparamref">TCollection</code></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/tausten/Ease.Util/new/develop/apiSpec/new?filename=Ease_Util_Collections_Generic_MapOfCollections_3_Remove__0__2_.md&amp;value=---%0Auid%3A%20Ease.Util.Collections.Generic.MapOfCollections%603.Remove(%600%2C%602)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/tausten/Ease.Util/blob/develop/Ease.Util/Collections/Generic/MapOfCollections.cs/#L123">View Source</a>
+  </span>
+  <a id="Ease_Util_Collections_Generic_MapOfCollections_3_Remove_" data-uid="Ease.Util.Collections.Generic.MapOfCollections`3.Remove*"></a>
+  <h4 id="Ease_Util_Collections_Generic_MapOfCollections_3_Remove__0__2_" data-uid="Ease.Util.Collections.Generic.MapOfCollections`3.Remove(`0,`2)">Remove(TKey, TValue)</h4>
+  <div class="markdown level1 summary"><p>Remove the value from the collection at <code data-dev-comment-type="paramref" class="paramref">key</code>. If the item does not exist in the collection, nothing happens.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Remove(TKey key, TValue value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The key for selecting the appropriate collection from which the <code data-dev-comment-type="paramref" class="paramref">value</code> will be removed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value to remove from the collection.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/tausten/Ease.Util/new/develop/apiSpec/new?filename=Ease_Util_Collections_Generic_MapOfCollections_3_RemoveValueFrom__1__2_.md&amp;value=---%0Auid%3A%20Ease.Util.Collections.Generic.MapOfCollections%603.RemoveValueFrom(%601%2C%602)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/tausten/Ease.Util/blob/develop/Ease.Util/Collections/Generic/MapOfCollections.cs/#L89">View Source</a>
+  </span>
+  <a id="Ease_Util_Collections_Generic_MapOfCollections_3_RemoveValueFrom_" data-uid="Ease.Util.Collections.Generic.MapOfCollections`3.RemoveValueFrom*"></a>
+  <h4 id="Ease_Util_Collections_Generic_MapOfCollections_3_RemoveValueFrom__1__2_" data-uid="Ease.Util.Collections.Generic.MapOfCollections`3.RemoveValueFrom(`1,`2)">RemoveValueFrom(TCollection, TValue)</h4>
+  <div class="markdown level1 summary"><p>Override to provide implementation for removing a value from an instance of <code data-dev-comment-type="typeparamref" class="typeparamref">TCollection</code>, otherwise
+the constructor-provided <code>removeItemFromCollection</code> will be used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void RemoveValueFrom(TCollection coll, TValue value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TCollection</span></td>
+        <td><span class="parametername">coll</span></td>
+        <td><p>The collection to which the value should be added.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value to remove.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/tausten/Ease.Util/new/develop/apiSpec/new?filename=Ease_Util_Collections_Generic_MapOfCollections_3.md&amp;value=---%0Auid%3A%20Ease.Util.Collections.Generic.MapOfCollections%603%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/tausten/Ease.Util/blob/develop/Ease.Util/Collections/Generic/MapOfCollections.cs/#L27" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

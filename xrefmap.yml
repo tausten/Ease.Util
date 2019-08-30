@@ -1,6 +1,237 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
+- uid: Ease.Util.Collections.Generic
+  name: Ease.Util.Collections.Generic
+  href: api/Ease.Util.Collections.Generic.html
+  commentId: N:Ease.Util.Collections.Generic
+  fullName: Ease.Util.Collections.Generic
+  nameWithType: Ease.Util.Collections.Generic
+- uid: Ease.Util.Collections.Generic.MapOfCollections`3
+  name: MapOfCollections<TKey, TCollection, TValue>
+  href: api/Ease.Util.Collections.Generic.MapOfCollections-3.html
+  commentId: T:Ease.Util.Collections.Generic.MapOfCollections`3
+  name.vb: MapOfCollections(Of TKey, TCollection, TValue)
+  fullName: Ease.Util.Collections.Generic.MapOfCollections<TKey, TCollection, TValue>
+  fullName.vb: Ease.Util.Collections.Generic.MapOfCollections(Of TKey, TCollection, TValue)
+  nameWithType: MapOfCollections<TKey, TCollection, TValue>
+  nameWithType.vb: MapOfCollections(Of TKey, TCollection, TValue)
+- uid: Ease.Util.Collections.Generic.MapOfCollections`3.#ctor(System.Func{`1},System.Action{`1,`2},System.Action{`1,`2})
+  name: MapOfCollections(Func<TCollection>, Action<TCollection, TValue>, Action<TCollection, TValue>)
+  href: api/Ease.Util.Collections.Generic.MapOfCollections-3.html#Ease_Util_Collections_Generic_MapOfCollections_3__ctor_System_Func__1__System_Action__1__2__System_Action__1__2__
+  commentId: M:Ease.Util.Collections.Generic.MapOfCollections`3.#ctor(System.Func{`1},System.Action{`1,`2},System.Action{`1,`2})
+  name.vb: MapOfCollections(Func(Of TCollection), Action(Of TCollection, TValue), Action(Of TCollection, TValue))
+  fullName: Ease.Util.Collections.Generic.MapOfCollections<TKey, TCollection, TValue>.MapOfCollections(System.Func<TCollection>, System.Action<TCollection, TValue>, System.Action<TCollection, TValue>)
+  fullName.vb: Ease.Util.Collections.Generic.MapOfCollections(Of TKey, TCollection, TValue).MapOfCollections(System.Func(Of TCollection), System.Action(Of TCollection, TValue), System.Action(Of TCollection, TValue))
+  nameWithType: MapOfCollections<TKey, TCollection, TValue>.MapOfCollections(Func<TCollection>, Action<TCollection, TValue>, Action<TCollection, TValue>)
+  nameWithType.vb: MapOfCollections(Of TKey, TCollection, TValue).MapOfCollections(Func(Of TCollection), Action(Of TCollection, TValue), Action(Of TCollection, TValue))
+- uid: Ease.Util.Collections.Generic.MapOfCollections`3.#ctor*
+  name: MapOfCollections
+  href: api/Ease.Util.Collections.Generic.MapOfCollections-3.html#Ease_Util_Collections_Generic_MapOfCollections_3__ctor_
+  commentId: Overload:Ease.Util.Collections.Generic.MapOfCollections`3.#ctor
+  isSpec: "True"
+  fullName: Ease.Util.Collections.Generic.MapOfCollections<TKey, TCollection, TValue>.MapOfCollections
+  fullName.vb: Ease.Util.Collections.Generic.MapOfCollections(Of TKey, TCollection, TValue).MapOfCollections
+  nameWithType: MapOfCollections<TKey, TCollection, TValue>.MapOfCollections
+  nameWithType.vb: MapOfCollections(Of TKey, TCollection, TValue).MapOfCollections
+- uid: Ease.Util.Collections.Generic.MapOfCollections`3.Add(`0,`2)
+  name: Add(TKey, TValue)
+  href: api/Ease.Util.Collections.Generic.MapOfCollections-3.html#Ease_Util_Collections_Generic_MapOfCollections_3_Add__0__2_
+  commentId: M:Ease.Util.Collections.Generic.MapOfCollections`3.Add(`0,`2)
+  fullName: Ease.Util.Collections.Generic.MapOfCollections<TKey, TCollection, TValue>.Add(TKey, TValue)
+  fullName.vb: Ease.Util.Collections.Generic.MapOfCollections(Of TKey, TCollection, TValue).Add(TKey, TValue)
+  nameWithType: MapOfCollections<TKey, TCollection, TValue>.Add(TKey, TValue)
+  nameWithType.vb: MapOfCollections(Of TKey, TCollection, TValue).Add(TKey, TValue)
+- uid: Ease.Util.Collections.Generic.MapOfCollections`3.Add*
+  name: Add
+  href: api/Ease.Util.Collections.Generic.MapOfCollections-3.html#Ease_Util_Collections_Generic_MapOfCollections_3_Add_
+  commentId: Overload:Ease.Util.Collections.Generic.MapOfCollections`3.Add
+  isSpec: "True"
+  fullName: Ease.Util.Collections.Generic.MapOfCollections<TKey, TCollection, TValue>.Add
+  fullName.vb: Ease.Util.Collections.Generic.MapOfCollections(Of TKey, TCollection, TValue).Add
+  nameWithType: MapOfCollections<TKey, TCollection, TValue>.Add
+  nameWithType.vb: MapOfCollections(Of TKey, TCollection, TValue).Add
+- uid: Ease.Util.Collections.Generic.MapOfCollections`3.AddValueTo(`1,`2)
+  name: AddValueTo(TCollection, TValue)
+  href: api/Ease.Util.Collections.Generic.MapOfCollections-3.html#Ease_Util_Collections_Generic_MapOfCollections_3_AddValueTo__1__2_
+  commentId: M:Ease.Util.Collections.Generic.MapOfCollections`3.AddValueTo(`1,`2)
+  fullName: Ease.Util.Collections.Generic.MapOfCollections<TKey, TCollection, TValue>.AddValueTo(TCollection, TValue)
+  fullName.vb: Ease.Util.Collections.Generic.MapOfCollections(Of TKey, TCollection, TValue).AddValueTo(TCollection, TValue)
+  nameWithType: MapOfCollections<TKey, TCollection, TValue>.AddValueTo(TCollection, TValue)
+  nameWithType.vb: MapOfCollections(Of TKey, TCollection, TValue).AddValueTo(TCollection, TValue)
+- uid: Ease.Util.Collections.Generic.MapOfCollections`3.AddValueTo*
+  name: AddValueTo
+  href: api/Ease.Util.Collections.Generic.MapOfCollections-3.html#Ease_Util_Collections_Generic_MapOfCollections_3_AddValueTo_
+  commentId: Overload:Ease.Util.Collections.Generic.MapOfCollections`3.AddValueTo
+  isSpec: "True"
+  fullName: Ease.Util.Collections.Generic.MapOfCollections<TKey, TCollection, TValue>.AddValueTo
+  fullName.vb: Ease.Util.Collections.Generic.MapOfCollections(Of TKey, TCollection, TValue).AddValueTo
+  nameWithType: MapOfCollections<TKey, TCollection, TValue>.AddValueTo
+  nameWithType.vb: MapOfCollections(Of TKey, TCollection, TValue).AddValueTo
+- uid: Ease.Util.Collections.Generic.MapOfCollections`3.Clear
+  name: Clear()
+  href: api/Ease.Util.Collections.Generic.MapOfCollections-3.html#Ease_Util_Collections_Generic_MapOfCollections_3_Clear
+  commentId: M:Ease.Util.Collections.Generic.MapOfCollections`3.Clear
+  fullName: Ease.Util.Collections.Generic.MapOfCollections<TKey, TCollection, TValue>.Clear()
+  fullName.vb: Ease.Util.Collections.Generic.MapOfCollections(Of TKey, TCollection, TValue).Clear()
+  nameWithType: MapOfCollections<TKey, TCollection, TValue>.Clear()
+  nameWithType.vb: MapOfCollections(Of TKey, TCollection, TValue).Clear()
+- uid: Ease.Util.Collections.Generic.MapOfCollections`3.Clear*
+  name: Clear
+  href: api/Ease.Util.Collections.Generic.MapOfCollections-3.html#Ease_Util_Collections_Generic_MapOfCollections_3_Clear_
+  commentId: Overload:Ease.Util.Collections.Generic.MapOfCollections`3.Clear
+  isSpec: "True"
+  fullName: Ease.Util.Collections.Generic.MapOfCollections<TKey, TCollection, TValue>.Clear
+  fullName.vb: Ease.Util.Collections.Generic.MapOfCollections(Of TKey, TCollection, TValue).Clear
+  nameWithType: MapOfCollections<TKey, TCollection, TValue>.Clear
+  nameWithType.vb: MapOfCollections(Of TKey, TCollection, TValue).Clear
+- uid: Ease.Util.Collections.Generic.MapOfCollections`3.Item(`0)
+  name: Item[TKey]
+  href: api/Ease.Util.Collections.Generic.MapOfCollections-3.html#Ease_Util_Collections_Generic_MapOfCollections_3_Item__0_
+  commentId: P:Ease.Util.Collections.Generic.MapOfCollections`3.Item(`0)
+  name.vb: Item(TKey)
+  fullName: Ease.Util.Collections.Generic.MapOfCollections<TKey, TCollection, TValue>.Item[TKey]
+  fullName.vb: Ease.Util.Collections.Generic.MapOfCollections(Of TKey, TCollection, TValue).Item(TKey)
+  nameWithType: MapOfCollections<TKey, TCollection, TValue>.Item[TKey]
+  nameWithType.vb: MapOfCollections(Of TKey, TCollection, TValue).Item(TKey)
+- uid: Ease.Util.Collections.Generic.MapOfCollections`3.Item*
+  name: Item
+  href: api/Ease.Util.Collections.Generic.MapOfCollections-3.html#Ease_Util_Collections_Generic_MapOfCollections_3_Item_
+  commentId: Overload:Ease.Util.Collections.Generic.MapOfCollections`3.Item
+  isSpec: "True"
+  fullName: Ease.Util.Collections.Generic.MapOfCollections<TKey, TCollection, TValue>.Item
+  fullName.vb: Ease.Util.Collections.Generic.MapOfCollections(Of TKey, TCollection, TValue).Item
+  nameWithType: MapOfCollections<TKey, TCollection, TValue>.Item
+  nameWithType.vb: MapOfCollections(Of TKey, TCollection, TValue).Item
+- uid: Ease.Util.Collections.Generic.MapOfCollections`3.NewCollection
+  name: NewCollection()
+  href: api/Ease.Util.Collections.Generic.MapOfCollections-3.html#Ease_Util_Collections_Generic_MapOfCollections_3_NewCollection
+  commentId: M:Ease.Util.Collections.Generic.MapOfCollections`3.NewCollection
+  fullName: Ease.Util.Collections.Generic.MapOfCollections<TKey, TCollection, TValue>.NewCollection()
+  fullName.vb: Ease.Util.Collections.Generic.MapOfCollections(Of TKey, TCollection, TValue).NewCollection()
+  nameWithType: MapOfCollections<TKey, TCollection, TValue>.NewCollection()
+  nameWithType.vb: MapOfCollections(Of TKey, TCollection, TValue).NewCollection()
+- uid: Ease.Util.Collections.Generic.MapOfCollections`3.NewCollection*
+  name: NewCollection
+  href: api/Ease.Util.Collections.Generic.MapOfCollections-3.html#Ease_Util_Collections_Generic_MapOfCollections_3_NewCollection_
+  commentId: Overload:Ease.Util.Collections.Generic.MapOfCollections`3.NewCollection
+  isSpec: "True"
+  fullName: Ease.Util.Collections.Generic.MapOfCollections<TKey, TCollection, TValue>.NewCollection
+  fullName.vb: Ease.Util.Collections.Generic.MapOfCollections(Of TKey, TCollection, TValue).NewCollection
+  nameWithType: MapOfCollections<TKey, TCollection, TValue>.NewCollection
+  nameWithType.vb: MapOfCollections(Of TKey, TCollection, TValue).NewCollection
+- uid: Ease.Util.Collections.Generic.MapOfCollections`3.Remove(`0,`2)
+  name: Remove(TKey, TValue)
+  href: api/Ease.Util.Collections.Generic.MapOfCollections-3.html#Ease_Util_Collections_Generic_MapOfCollections_3_Remove__0__2_
+  commentId: M:Ease.Util.Collections.Generic.MapOfCollections`3.Remove(`0,`2)
+  fullName: Ease.Util.Collections.Generic.MapOfCollections<TKey, TCollection, TValue>.Remove(TKey, TValue)
+  fullName.vb: Ease.Util.Collections.Generic.MapOfCollections(Of TKey, TCollection, TValue).Remove(TKey, TValue)
+  nameWithType: MapOfCollections<TKey, TCollection, TValue>.Remove(TKey, TValue)
+  nameWithType.vb: MapOfCollections(Of TKey, TCollection, TValue).Remove(TKey, TValue)
+- uid: Ease.Util.Collections.Generic.MapOfCollections`3.Remove*
+  name: Remove
+  href: api/Ease.Util.Collections.Generic.MapOfCollections-3.html#Ease_Util_Collections_Generic_MapOfCollections_3_Remove_
+  commentId: Overload:Ease.Util.Collections.Generic.MapOfCollections`3.Remove
+  isSpec: "True"
+  fullName: Ease.Util.Collections.Generic.MapOfCollections<TKey, TCollection, TValue>.Remove
+  fullName.vb: Ease.Util.Collections.Generic.MapOfCollections(Of TKey, TCollection, TValue).Remove
+  nameWithType: MapOfCollections<TKey, TCollection, TValue>.Remove
+  nameWithType.vb: MapOfCollections(Of TKey, TCollection, TValue).Remove
+- uid: Ease.Util.Collections.Generic.MapOfCollections`3.RemoveValueFrom(`1,`2)
+  name: RemoveValueFrom(TCollection, TValue)
+  href: api/Ease.Util.Collections.Generic.MapOfCollections-3.html#Ease_Util_Collections_Generic_MapOfCollections_3_RemoveValueFrom__1__2_
+  commentId: M:Ease.Util.Collections.Generic.MapOfCollections`3.RemoveValueFrom(`1,`2)
+  fullName: Ease.Util.Collections.Generic.MapOfCollections<TKey, TCollection, TValue>.RemoveValueFrom(TCollection, TValue)
+  fullName.vb: Ease.Util.Collections.Generic.MapOfCollections(Of TKey, TCollection, TValue).RemoveValueFrom(TCollection, TValue)
+  nameWithType: MapOfCollections<TKey, TCollection, TValue>.RemoveValueFrom(TCollection, TValue)
+  nameWithType.vb: MapOfCollections(Of TKey, TCollection, TValue).RemoveValueFrom(TCollection, TValue)
+- uid: Ease.Util.Collections.Generic.MapOfCollections`3.RemoveValueFrom*
+  name: RemoveValueFrom
+  href: api/Ease.Util.Collections.Generic.MapOfCollections-3.html#Ease_Util_Collections_Generic_MapOfCollections_3_RemoveValueFrom_
+  commentId: Overload:Ease.Util.Collections.Generic.MapOfCollections`3.RemoveValueFrom
+  isSpec: "True"
+  fullName: Ease.Util.Collections.Generic.MapOfCollections<TKey, TCollection, TValue>.RemoveValueFrom
+  fullName.vb: Ease.Util.Collections.Generic.MapOfCollections(Of TKey, TCollection, TValue).RemoveValueFrom
+  nameWithType: MapOfCollections<TKey, TCollection, TValue>.RemoveValueFrom
+  nameWithType.vb: MapOfCollections(Of TKey, TCollection, TValue).RemoveValueFrom
+- uid: Ease.Util.Collections.Generic.MapOfConcreteCollections`3
+  name: MapOfConcreteCollections<TKey, TCollection, TValue>
+  href: api/Ease.Util.Collections.Generic.MapOfConcreteCollections-3.html
+  commentId: T:Ease.Util.Collections.Generic.MapOfConcreteCollections`3
+  name.vb: MapOfConcreteCollections(Of TKey, TCollection, TValue)
+  fullName: Ease.Util.Collections.Generic.MapOfConcreteCollections<TKey, TCollection, TValue>
+  fullName.vb: Ease.Util.Collections.Generic.MapOfConcreteCollections(Of TKey, TCollection, TValue)
+  nameWithType: MapOfConcreteCollections<TKey, TCollection, TValue>
+  nameWithType.vb: MapOfConcreteCollections(Of TKey, TCollection, TValue)
+- uid: Ease.Util.Collections.Generic.MapOfConcreteCollections`3.AddValueTo(`1,`2)
+  name: AddValueTo(TCollection, TValue)
+  href: api/Ease.Util.Collections.Generic.MapOfConcreteCollections-3.html#Ease_Util_Collections_Generic_MapOfConcreteCollections_3_AddValueTo__1__2_
+  commentId: M:Ease.Util.Collections.Generic.MapOfConcreteCollections`3.AddValueTo(`1,`2)
+  fullName: Ease.Util.Collections.Generic.MapOfConcreteCollections<TKey, TCollection, TValue>.AddValueTo(TCollection, TValue)
+  fullName.vb: Ease.Util.Collections.Generic.MapOfConcreteCollections(Of TKey, TCollection, TValue).AddValueTo(TCollection, TValue)
+  nameWithType: MapOfConcreteCollections<TKey, TCollection, TValue>.AddValueTo(TCollection, TValue)
+  nameWithType.vb: MapOfConcreteCollections(Of TKey, TCollection, TValue).AddValueTo(TCollection, TValue)
+- uid: Ease.Util.Collections.Generic.MapOfConcreteCollections`3.AddValueTo*
+  name: AddValueTo
+  href: api/Ease.Util.Collections.Generic.MapOfConcreteCollections-3.html#Ease_Util_Collections_Generic_MapOfConcreteCollections_3_AddValueTo_
+  commentId: Overload:Ease.Util.Collections.Generic.MapOfConcreteCollections`3.AddValueTo
+  isSpec: "True"
+  fullName: Ease.Util.Collections.Generic.MapOfConcreteCollections<TKey, TCollection, TValue>.AddValueTo
+  fullName.vb: Ease.Util.Collections.Generic.MapOfConcreteCollections(Of TKey, TCollection, TValue).AddValueTo
+  nameWithType: MapOfConcreteCollections<TKey, TCollection, TValue>.AddValueTo
+  nameWithType.vb: MapOfConcreteCollections(Of TKey, TCollection, TValue).AddValueTo
+- uid: Ease.Util.Collections.Generic.MapOfConcreteCollections`3.NewCollection
+  name: NewCollection()
+  href: api/Ease.Util.Collections.Generic.MapOfConcreteCollections-3.html#Ease_Util_Collections_Generic_MapOfConcreteCollections_3_NewCollection
+  commentId: M:Ease.Util.Collections.Generic.MapOfConcreteCollections`3.NewCollection
+  fullName: Ease.Util.Collections.Generic.MapOfConcreteCollections<TKey, TCollection, TValue>.NewCollection()
+  fullName.vb: Ease.Util.Collections.Generic.MapOfConcreteCollections(Of TKey, TCollection, TValue).NewCollection()
+  nameWithType: MapOfConcreteCollections<TKey, TCollection, TValue>.NewCollection()
+  nameWithType.vb: MapOfConcreteCollections(Of TKey, TCollection, TValue).NewCollection()
+- uid: Ease.Util.Collections.Generic.MapOfConcreteCollections`3.NewCollection*
+  name: NewCollection
+  href: api/Ease.Util.Collections.Generic.MapOfConcreteCollections-3.html#Ease_Util_Collections_Generic_MapOfConcreteCollections_3_NewCollection_
+  commentId: Overload:Ease.Util.Collections.Generic.MapOfConcreteCollections`3.NewCollection
+  isSpec: "True"
+  fullName: Ease.Util.Collections.Generic.MapOfConcreteCollections<TKey, TCollection, TValue>.NewCollection
+  fullName.vb: Ease.Util.Collections.Generic.MapOfConcreteCollections(Of TKey, TCollection, TValue).NewCollection
+  nameWithType: MapOfConcreteCollections<TKey, TCollection, TValue>.NewCollection
+  nameWithType.vb: MapOfConcreteCollections(Of TKey, TCollection, TValue).NewCollection
+- uid: Ease.Util.Collections.Generic.MapOfConcreteCollections`3.RemoveValueFrom(`1,`2)
+  name: RemoveValueFrom(TCollection, TValue)
+  href: api/Ease.Util.Collections.Generic.MapOfConcreteCollections-3.html#Ease_Util_Collections_Generic_MapOfConcreteCollections_3_RemoveValueFrom__1__2_
+  commentId: M:Ease.Util.Collections.Generic.MapOfConcreteCollections`3.RemoveValueFrom(`1,`2)
+  fullName: Ease.Util.Collections.Generic.MapOfConcreteCollections<TKey, TCollection, TValue>.RemoveValueFrom(TCollection, TValue)
+  fullName.vb: Ease.Util.Collections.Generic.MapOfConcreteCollections(Of TKey, TCollection, TValue).RemoveValueFrom(TCollection, TValue)
+  nameWithType: MapOfConcreteCollections<TKey, TCollection, TValue>.RemoveValueFrom(TCollection, TValue)
+  nameWithType.vb: MapOfConcreteCollections(Of TKey, TCollection, TValue).RemoveValueFrom(TCollection, TValue)
+- uid: Ease.Util.Collections.Generic.MapOfConcreteCollections`3.RemoveValueFrom*
+  name: RemoveValueFrom
+  href: api/Ease.Util.Collections.Generic.MapOfConcreteCollections-3.html#Ease_Util_Collections_Generic_MapOfConcreteCollections_3_RemoveValueFrom_
+  commentId: Overload:Ease.Util.Collections.Generic.MapOfConcreteCollections`3.RemoveValueFrom
+  isSpec: "True"
+  fullName: Ease.Util.Collections.Generic.MapOfConcreteCollections<TKey, TCollection, TValue>.RemoveValueFrom
+  fullName.vb: Ease.Util.Collections.Generic.MapOfConcreteCollections(Of TKey, TCollection, TValue).RemoveValueFrom
+  nameWithType: MapOfConcreteCollections<TKey, TCollection, TValue>.RemoveValueFrom
+  nameWithType.vb: MapOfConcreteCollections(Of TKey, TCollection, TValue).RemoveValueFrom
+- uid: Ease.Util.Collections.Generic.MapOfHashSets`2
+  name: MapOfHashSets<TKey, TValue>
+  href: api/Ease.Util.Collections.Generic.MapOfHashSets-2.html
+  commentId: T:Ease.Util.Collections.Generic.MapOfHashSets`2
+  name.vb: MapOfHashSets(Of TKey, TValue)
+  fullName: Ease.Util.Collections.Generic.MapOfHashSets<TKey, TValue>
+  fullName.vb: Ease.Util.Collections.Generic.MapOfHashSets(Of TKey, TValue)
+  nameWithType: MapOfHashSets<TKey, TValue>
+  nameWithType.vb: MapOfHashSets(Of TKey, TValue)
+- uid: Ease.Util.Collections.Generic.MapOfLists`2
+  name: MapOfLists<TKey, TValue>
+  href: api/Ease.Util.Collections.Generic.MapOfLists-2.html
+  commentId: T:Ease.Util.Collections.Generic.MapOfLists`2
+  name.vb: MapOfLists(Of TKey, TValue)
+  fullName: Ease.Util.Collections.Generic.MapOfLists<TKey, TValue>
+  fullName.vb: Ease.Util.Collections.Generic.MapOfLists(Of TKey, TValue)
+  nameWithType: MapOfLists<TKey, TValue>
+  nameWithType.vb: MapOfLists(Of TKey, TValue)
 - uid: Ease.Util.Disposably
   name: Ease.Util.Disposably
   href: api/Ease.Util.Disposably.html

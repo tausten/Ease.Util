@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class DirectoryInfoExtensions
+    <title>Class MapOfHashSets&lt;TKey, TValue&gt;
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class DirectoryInfoExtensions
+    <meta name="title" content="Class MapOfHashSets&lt;TKey, TValue&gt;
    ">
     <meta name="generator" content="docfx 2.45.0.0">
     
@@ -68,20 +68,53 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Ease.Util.Extensions.DirectoryInfoExtensions">
+            <article class="content wrap" id="_content" data-uid="Ease.Util.Collections.Generic.MapOfHashSets`2">
   
   
-  <h1 id="Ease_Util_Extensions_DirectoryInfoExtensions" data-uid="Ease.Util.Extensions.DirectoryInfoExtensions" class="text-break">Class DirectoryInfoExtensions
+  <h1 id="Ease_Util_Collections_Generic_MapOfHashSets_2" data-uid="Ease.Util.Collections.Generic.MapOfHashSets`2" class="text-break">Class MapOfHashSets&lt;TKey, TValue&gt;
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Convenience implementation of <a class="xref" href="Ease.Util.Collections.Generic.MapOfConcreteCollections-3.html">MapOfConcreteCollections&lt;TKey, TCollection, TValue&gt;</a> for <span class="xref">System.Collections.Generic.HashSet`1</span>.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">DirectoryInfoExtensions</span></div>
+    <div class="level1"><a class="xref" href="Ease.Util.Collections.Generic.MapOfCollections-3.html">MapOfCollections</a>&lt;TKey, <span class="xref">System.Collections.Generic.HashSet</span>&lt;TValue&gt;, TValue&gt;</div>
+    <div class="level2"><a class="xref" href="Ease.Util.Collections.Generic.MapOfConcreteCollections-3.html">MapOfConcreteCollections</a>&lt;TKey, <span class="xref">System.Collections.Generic.HashSet</span>&lt;TValue&gt;, TValue&gt;</div>
+    <div class="level3"><span class="xref">MapOfHashSets&lt;TKey, TValue&gt;</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Ease.Util.Collections.Generic.MapOfConcreteCollections-3.html#Ease_Util_Collections_Generic_MapOfConcreteCollections_3_NewCollection">MapOfConcreteCollections&lt;TKey, HashSet&lt;TValue&gt;, TValue&gt;.NewCollection()</a>
+    </div>
+    <div>
+      <a class="xref" href="Ease.Util.Collections.Generic.MapOfConcreteCollections-3.html#Ease_Util_Collections_Generic_MapOfConcreteCollections_3_AddValueTo__1__2_">MapOfConcreteCollections&lt;TKey, HashSet&lt;TValue&gt;, TValue&gt;.AddValueTo(HashSet&lt;TValue&gt;, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ease.Util.Collections.Generic.MapOfConcreteCollections-3.html#Ease_Util_Collections_Generic_MapOfConcreteCollections_3_RemoveValueFrom__1__2_">MapOfConcreteCollections&lt;TKey, HashSet&lt;TValue&gt;, TValue&gt;.RemoveValueFrom(HashSet&lt;TValue&gt;, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ease.Util.Collections.Generic.MapOfCollections-3.html#Ease_Util_Collections_Generic_MapOfCollections_3_NewCollection">MapOfCollections&lt;TKey, HashSet&lt;TValue&gt;, TValue&gt;.NewCollection()</a>
+    </div>
+    <div>
+      <a class="xref" href="Ease.Util.Collections.Generic.MapOfCollections-3.html#Ease_Util_Collections_Generic_MapOfCollections_3_AddValueTo__1__2_">MapOfCollections&lt;TKey, HashSet&lt;TValue&gt;, TValue&gt;.AddValueTo(HashSet&lt;TValue&gt;, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ease.Util.Collections.Generic.MapOfCollections-3.html#Ease_Util_Collections_Generic_MapOfCollections_3_RemoveValueFrom__1__2_">MapOfCollections&lt;TKey, HashSet&lt;TValue&gt;, TValue&gt;.RemoveValueFrom(HashSet&lt;TValue&gt;, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ease.Util.Collections.Generic.MapOfCollections-3.html#Ease_Util_Collections_Generic_MapOfCollections_3_Add__0__2_">MapOfCollections&lt;TKey, HashSet&lt;TValue&gt;, TValue&gt;.Add(TKey, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ease.Util.Collections.Generic.MapOfCollections-3.html#Ease_Util_Collections_Generic_MapOfCollections_3_Remove__0__2_">MapOfCollections&lt;TKey, HashSet&lt;TValue&gt;, TValue&gt;.Remove(TKey, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ease.Util.Collections.Generic.MapOfCollections-3.html#Ease_Util_Collections_Generic_MapOfCollections_3_Item__0_">MapOfCollections&lt;TKey, HashSet&lt;TValue&gt;, TValue&gt;.Item[TKey]</a>
+    </div>
+    <div>
+      <a class="xref" href="Ease.Util.Collections.Generic.MapOfCollections-3.html#Ease_Util_Collections_Generic_MapOfCollections_3_Clear">MapOfCollections&lt;TKey, HashSet&lt;TValue&gt;, TValue&gt;.Clear()</a>
+    </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object)</span>
     </div>
@@ -104,69 +137,28 @@
       <span class="xref">System.Object.ToString()</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Ease.Util.Extensions.html">Ease.Util.Extensions</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Ease.Util.Collections.Generic.html">Ease.Util.Collections.Generic</a></h6>
   <h6><strong>Assembly</strong>: Ease.Util.dll</h6>
-  <h5 id="Ease_Util_Extensions_DirectoryInfoExtensions_syntax">Syntax</h5>
+  <h5 id="Ease_Util_Collections_Generic_MapOfHashSets_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class DirectoryInfoExtensions</code></pre>
+    <pre><code class="lang-csharp hljs">public class MapOfHashSets&lt;TKey, TValue&gt; : MapOfConcreteCollections&lt;TKey, HashSet&lt;TValue&gt;, TValue&gt;</code></pre>
   </div>
-  <h3 id="methods">Methods
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/tausten/Ease.Util/new/develop/apiSpec/new?filename=Ease_Util_Extensions_DirectoryInfoExtensions_GetTempFileName_System_IO_DirectoryInfo_System_Int32_.md&amp;value=---%0Auid%3A%20Ease.Util.Extensions.DirectoryInfoExtensions.GetTempFileName(System.IO.DirectoryInfo%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/tausten/Ease.Util/blob/develop/Ease.Util/Extensions/DirectoryInfoExtensions.cs/#L20">View Source</a>
-  </span>
-  <a id="Ease_Util_Extensions_DirectoryInfoExtensions_GetTempFileName_" data-uid="Ease.Util.Extensions.DirectoryInfoExtensions.GetTempFileName*"></a>
-  <h4 id="Ease_Util_Extensions_DirectoryInfoExtensions_GetTempFileName_System_IO_DirectoryInfo_System_Int32_" data-uid="Ease.Util.Extensions.DirectoryInfoExtensions.GetTempFileName(System.IO.DirectoryInfo,System.Int32)">GetTempFileName(DirectoryInfo, Int32)</h4>
-  <div class="markdown level1 summary"><p>Creates a uniquely named zero-byte file on disk under the DirectoryInfo's directory and returns the
-full path of that file. WARNING: The caller is responsible for cleaning up this file when done.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string GetTempFileName(this DirectoryInfo directoryInfo, int maxAttempts = 0)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
+  <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
-        <th>Type</th>
         <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.IO.DirectoryInfo</span></td>
-        <td><span class="parametername">directoryInfo</span></td>
-        <td><p>The DirectoryInfo for the directory in which to create the file.</p>
-</td>
+        <td><span class="parametername">TKey</span></td>
+        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">maxAttempts</span></td>
-        <td><p>[optional] The maximum number of attempts to make to create the file.
-Default is unlimited.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><p>The path to the new zero-byte temporary file.</p>
-</td>
+        <td><span class="parametername">TValue</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -178,10 +170,10 @@ Default is unlimited.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/tausten/Ease.Util/new/develop/apiSpec/new?filename=Ease_Util_Extensions_DirectoryInfoExtensions.md&amp;value=---%0Auid%3A%20Ease.Util.Extensions.DirectoryInfoExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/tausten/Ease.Util/new/develop/apiSpec/new?filename=Ease_Util_Collections_Generic_MapOfHashSets_2.md&amp;value=---%0Auid%3A%20Ease.Util.Collections.Generic.MapOfHashSets%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/tausten/Ease.Util/blob/develop/Ease.Util/Extensions/DirectoryInfoExtensions.cs/#L10" class="contribution-link">View Source</a>
+                    <a href="https://github.com/tausten/Ease.Util/blob/develop/Ease.Util/Collections/Generic/MapOfCollections.cs/#L170" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

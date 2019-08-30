@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Namespace Ease.Util.Disposably
+    <title>Namespace Ease.Util.Collections.Generic
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Namespace Ease.Util.Disposably
+    <meta name="title" content="Namespace Ease.Util.Collections.Generic
    ">
     <meta name="generator" content="docfx 2.45.0.0">
     
@@ -68,60 +68,34 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Ease.Util.Disposably">
+            <article class="content wrap" id="_content" data-uid="Ease.Util.Collections.Generic">
   
-  <h1 id="Ease_Util_Disposably" data-uid="Ease.Util.Disposably" class="text-break">Namespace Ease.Util.Disposably
+  <h1 id="Ease_Util_Collections_Generic" data-uid="Ease.Util.Collections.Generic" class="text-break">Namespace Ease.Util.Collections.Generic
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
-      <h4><a class="xref" href="Ease.Util.Disposably.FactoryScoped-1.html">FactoryScoped&lt;T&gt;</a></h4>
-      <section><p>A utility class for managing lifetime of factory pattern managed resources that require to be released in some way other than
-by the simple Dispose pattern. The allocation is done lazily such that if the .Instance member is not accessed, then neither
-<code>allocateFunction</code> nor <code>releaseAction</code> will be called.</p>
+      <h4><a class="xref" href="Ease.Util.Collections.Generic.MapOfCollections-3.html">MapOfCollections&lt;TKey, TCollection, TValue&gt;</a></h4>
+      <section><p>A mapping of keys to a collection of values. Takes care of ensuring that an empty collection is present,
+avoiding need for null checks and collection initialization per key prior to use. Eg:</p>
+<pre><code>var families = new MapOfCollections&lt;string, HashSet&lt;string>, string>();
+families[&quot;Doe&quot;].Add(&quot;Jane&quot;);
+families[&quot;Doe&quot;].Add(&quot;John&quot;);
+var theDoes = string.Join(&quot;, &quot;, families[&quot;Doe&quot;]);</code></pre>
+<p>See <a class="xref" href="Ease.Util.Collections.Generic.MapOfHashSets-2.html">MapOfHashSets&lt;TKey, TValue&gt;</a> and <a class="xref" href="Ease.Util.Collections.Generic.MapOfLists-2.html">MapOfLists&lt;TKey, TValue&gt;</a> for convenient simplification for
+common some cases.</p>
 </section>
-      <h4><a class="xref" href="Ease.Util.Disposably.SafeDisposable.html">SafeDisposable</a></h4>
-      <section><p>Base class for implementation of standard <code>IDisposable</code> pattern in threadsafe, multi-Dispose() protected manner.</p>
+      <h4><a class="xref" href="Ease.Util.Collections.Generic.MapOfConcreteCollections-3.html">MapOfConcreteCollections&lt;TKey, TCollection, TValue&gt;</a></h4>
+      <section><p>Convenience implementation of <a class="xref" href="Ease.Util.Collections.Generic.MapOfCollections-3.html">MapOfCollections&lt;TKey, TCollection, TValue&gt;</a> for concrete collections implementing
+<span class="xref">System.Collections.Generic.ICollection`1</span></p>
 </section>
-      <h4><a class="xref" href="Ease.Util.Disposably.SafeDisposableWithFinalizer.html">SafeDisposableWithFinalizer</a></h4>
-      <section><p>Base class for implementation of standard <code>IDisposable</code> pattern in threadsafe, multi-Dispose() protected manner. This
-variant adds support for finalization which is important for classes that use unmanaged resources and need to ensure
-they are cleaned up in the last-ditch finalization flow if they haven't been before.</p>
+      <h4><a class="xref" href="Ease.Util.Collections.Generic.MapOfHashSets-2.html">MapOfHashSets&lt;TKey, TValue&gt;</a></h4>
+      <section><p>Convenience implementation of <a class="xref" href="Ease.Util.Collections.Generic.MapOfConcreteCollections-3.html">MapOfConcreteCollections&lt;TKey, TCollection, TValue&gt;</a> for <span class="xref">System.Collections.Generic.HashSet`1</span>.</p>
 </section>
-      <h4><a class="xref" href="Ease.Util.Disposably.Scoped.html">Scoped</a></h4>
-      <section><p>A utility class for managing ad-hoc scope states.</p>
-</section>
-      <h4><a class="xref" href="Ease.Util.Disposably.ScopedLock.html">ScopedLock</a></h4>
-      <section><p>A class for mapping locking into a Disposable pattern. Normally, you should just use <code>lock</code> for your traditional
-thread synchronization, but this class helps in the case where you wish to allow a user of your class to &quot;borrow&quot; an
-internal guard object so they may lock it for the duration of a <code>using</code> block. Rather than just handing out your
-inner guard object and losing control of it, you can narrow the exposure to the using block, and continue to hide
-the guard object itself.</p>
-<p>See <a class="xref" href="Ease.Util.Disposably.SafeDisposable.html">SafeDisposable</a> for an example of one special case where this can be used to close a race condition.</p>
-<pre><code>class SomeClass
-{
-    private readonly object _guard = new object();
-    // ... a bunch of functionality that relies upon the _guard ...
-
-    /// 
-    /// The property to allow clients of your class to borrow your 
-    /// _guard object briefly.
-    /// 
-    public ScopedLock TemporaryLock { get { return new ScopedLock(_guard); } }
-}
-
-SomeClass theThing; // obtained however is appropriate for your situation
-
-// ... client now wishes to make sure their block of code can execute to 
-// completion before any of your methods can acquire the lock...
-
-using (theThing.TemporaryLock)
-{
-    // ... go ahead and do stuff knowing that theThing&apos;s lock won&apos;t be acquired 
-    // before this scope is exited.
-}</code></pre>
+      <h4><a class="xref" href="Ease.Util.Collections.Generic.MapOfLists-2.html">MapOfLists&lt;TKey, TValue&gt;</a></h4>
+      <section><p>Convenience implementation of <a class="xref" href="Ease.Util.Collections.Generic.MapOfConcreteCollections-3.html">MapOfConcreteCollections&lt;TKey, TCollection, TValue&gt;</a> for <span class="xref">System.Collections.Generic.List`1</span>.</p>
 </section>
 </article>
           </div>

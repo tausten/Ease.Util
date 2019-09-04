@@ -542,6 +542,82 @@ references:
   isSpec: "True"
   fullName: Ease.Util.Extensions.DirectoryInfoExtensions.GetTempFileName
   nameWithType: DirectoryInfoExtensions.GetTempFileName
+- uid: Ease.Util.Extensions.EnumerableExtensions
+  name: EnumerableExtensions
+  href: api/Ease.Util.Extensions.EnumerableExtensions.html
+  commentId: T:Ease.Util.Extensions.EnumerableExtensions
+  fullName: Ease.Util.Extensions.EnumerableExtensions
+  nameWithType: EnumerableExtensions
+- uid: Ease.Util.Extensions.EnumerableExtensions.ImmediateBatch*
+  name: ImmediateBatch
+  href: api/Ease.Util.Extensions.EnumerableExtensions.html#Ease_Util_Extensions_EnumerableExtensions_ImmediateBatch_
+  commentId: Overload:Ease.Util.Extensions.EnumerableExtensions.ImmediateBatch
+  isSpec: "True"
+  fullName: Ease.Util.Extensions.EnumerableExtensions.ImmediateBatch
+  nameWithType: EnumerableExtensions.ImmediateBatch
+- uid: Ease.Util.Extensions.EnumerableExtensions.ImmediateBatch``1(System.Collections.Generic.IEnumerable{``0},System.Int32,System.Action{System.Collections.Generic.IEnumerable{``0}})
+  name: ImmediateBatch<TElement>(IEnumerable<TElement>, Int32, Action<IEnumerable<TElement>>)
+  href: api/Ease.Util.Extensions.EnumerableExtensions.html#Ease_Util_Extensions_EnumerableExtensions_ImmediateBatch__1_System_Collections_Generic_IEnumerable___0__System_Int32_System_Action_System_Collections_Generic_IEnumerable___0___
+  commentId: M:Ease.Util.Extensions.EnumerableExtensions.ImmediateBatch``1(System.Collections.Generic.IEnumerable{``0},System.Int32,System.Action{System.Collections.Generic.IEnumerable{``0}})
+  name.vb: ImmediateBatch(Of TElement)(IEnumerable(Of TElement), Int32, Action(Of IEnumerable(Of TElement)))
+  fullName: Ease.Util.Extensions.EnumerableExtensions.ImmediateBatch<TElement>(System.Collections.Generic.IEnumerable<TElement>, System.Int32, System.Action<System.Collections.Generic.IEnumerable<TElement>>)
+  fullName.vb: Ease.Util.Extensions.EnumerableExtensions.ImmediateBatch(Of TElement)(System.Collections.Generic.IEnumerable(Of TElement), System.Int32, System.Action(Of System.Collections.Generic.IEnumerable(Of TElement)))
+  nameWithType: EnumerableExtensions.ImmediateBatch<TElement>(IEnumerable<TElement>, Int32, Action<IEnumerable<TElement>>)
+  nameWithType.vb: EnumerableExtensions.ImmediateBatch(Of TElement)(IEnumerable(Of TElement), Int32, Action(Of IEnumerable(Of TElement)))
+- uid: Ease.Util.Extensions.EnumerableExtensions.YieldedBatch*
+  name: YieldedBatch
+  href: api/Ease.Util.Extensions.EnumerableExtensions.html#Ease_Util_Extensions_EnumerableExtensions_YieldedBatch_
+  commentId: Overload:Ease.Util.Extensions.EnumerableExtensions.YieldedBatch
+  isSpec: "True"
+  fullName: Ease.Util.Extensions.EnumerableExtensions.YieldedBatch
+  nameWithType: EnumerableExtensions.YieldedBatch
+- uid: Ease.Util.Extensions.EnumerableExtensions.YieldedBatch``1(System.Collections.Generic.IEnumerable{``0},System.Int32,System.Action{System.Collections.Generic.IEnumerable{``0}})
+  name: YieldedBatch<TElement>(IEnumerable<TElement>, Int32, Action<IEnumerable<TElement>>)
+  href: api/Ease.Util.Extensions.EnumerableExtensions.html#Ease_Util_Extensions_EnumerableExtensions_YieldedBatch__1_System_Collections_Generic_IEnumerable___0__System_Int32_System_Action_System_Collections_Generic_IEnumerable___0___
+  commentId: M:Ease.Util.Extensions.EnumerableExtensions.YieldedBatch``1(System.Collections.Generic.IEnumerable{``0},System.Int32,System.Action{System.Collections.Generic.IEnumerable{``0}})
+  name.vb: YieldedBatch(Of TElement)(IEnumerable(Of TElement), Int32, Action(Of IEnumerable(Of TElement)))
+  fullName: Ease.Util.Extensions.EnumerableExtensions.YieldedBatch<TElement>(System.Collections.Generic.IEnumerable<TElement>, System.Int32, System.Action<System.Collections.Generic.IEnumerable<TElement>>)
+  fullName.vb: Ease.Util.Extensions.EnumerableExtensions.YieldedBatch(Of TElement)(System.Collections.Generic.IEnumerable(Of TElement), System.Int32, System.Action(Of System.Collections.Generic.IEnumerable(Of TElement)))
+  nameWithType: EnumerableExtensions.YieldedBatch<TElement>(IEnumerable<TElement>, Int32, Action<IEnumerable<TElement>>)
+  nameWithType.vb: EnumerableExtensions.YieldedBatch(Of TElement)(IEnumerable(Of TElement), Int32, Action(Of IEnumerable(Of TElement)))
+- uid: Ease.Util.Extensions.EnumExtensions
+  name: EnumExtensions
+  href: api/Ease.Util.Extensions.EnumExtensions.html
+  commentId: T:Ease.Util.Extensions.EnumExtensions
+  fullName: Ease.Util.Extensions.EnumExtensions
+  nameWithType: EnumExtensions
+- uid: Ease.Util.Extensions.EnumExtensions.GetAllEnumValues*
+  name: GetAllEnumValues
+  href: api/Ease.Util.Extensions.EnumExtensions.html#Ease_Util_Extensions_EnumExtensions_GetAllEnumValues_
+  commentId: Overload:Ease.Util.Extensions.EnumExtensions.GetAllEnumValues
+  isSpec: "True"
+  fullName: Ease.Util.Extensions.EnumExtensions.GetAllEnumValues
+  nameWithType: EnumExtensions.GetAllEnumValues
+- uid: Ease.Util.Extensions.EnumExtensions.GetAllEnumValues``1(``0)
+  name: GetAllEnumValues<TEnum>(TEnum)
+  href: api/Ease.Util.Extensions.EnumExtensions.html#Ease_Util_Extensions_EnumExtensions_GetAllEnumValues__1___0_
+  commentId: M:Ease.Util.Extensions.EnumExtensions.GetAllEnumValues``1(``0)
+  name.vb: GetAllEnumValues(Of TEnum)(TEnum)
+  fullName: Ease.Util.Extensions.EnumExtensions.GetAllEnumValues<TEnum>(TEnum)
+  fullName.vb: Ease.Util.Extensions.EnumExtensions.GetAllEnumValues(Of TEnum)(TEnum)
+  nameWithType: EnumExtensions.GetAllEnumValues<TEnum>(TEnum)
+  nameWithType.vb: EnumExtensions.GetAllEnumValues(Of TEnum)(TEnum)
+- uid: Ease.Util.Extensions.EnumExtensions.GetAllEnumValuesFor*
+  name: GetAllEnumValuesFor
+  href: api/Ease.Util.Extensions.EnumExtensions.html#Ease_Util_Extensions_EnumExtensions_GetAllEnumValuesFor_
+  commentId: Overload:Ease.Util.Extensions.EnumExtensions.GetAllEnumValuesFor
+  isSpec: "True"
+  fullName: Ease.Util.Extensions.EnumExtensions.GetAllEnumValuesFor
+  nameWithType: EnumExtensions.GetAllEnumValuesFor
+- uid: Ease.Util.Extensions.EnumExtensions.GetAllEnumValuesFor``1
+  name: GetAllEnumValuesFor<TEnum>()
+  href: api/Ease.Util.Extensions.EnumExtensions.html#Ease_Util_Extensions_EnumExtensions_GetAllEnumValuesFor__1
+  commentId: M:Ease.Util.Extensions.EnumExtensions.GetAllEnumValuesFor``1
+  name.vb: GetAllEnumValuesFor(Of TEnum)()
+  fullName: Ease.Util.Extensions.EnumExtensions.GetAllEnumValuesFor<TEnum>()
+  fullName.vb: Ease.Util.Extensions.EnumExtensions.GetAllEnumValuesFor(Of TEnum)()
+  nameWithType: EnumExtensions.GetAllEnumValuesFor<TEnum>()
+  nameWithType.vb: EnumExtensions.GetAllEnumValuesFor(Of TEnum)()
 - uid: Ease.Util.Extensions.StringExtensions
   name: StringExtensions
   href: api/Ease.Util.Extensions.StringExtensions.html

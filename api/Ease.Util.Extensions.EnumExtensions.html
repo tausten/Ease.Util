@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class AssemblyExtensions
+    <title>Class EnumExtensions
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class AssemblyExtensions
+    <meta name="title" content="Class EnumExtensions
    ">
     <meta name="generator" content="docfx 2.45.0.0">
     
@@ -68,17 +68,17 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Ease.Util.Extensions.AssemblyExtensions">
+            <article class="content wrap" id="_content" data-uid="Ease.Util.Extensions.EnumExtensions">
   
   
-  <h1 id="Ease_Util_Extensions_AssemblyExtensions" data-uid="Ease.Util.Extensions.AssemblyExtensions" class="text-break">Class AssemblyExtensions
+  <h1 id="Ease_Util_Extensions_EnumExtensions" data-uid="Ease.Util.Extensions.EnumExtensions" class="text-break">Class EnumExtensions
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">AssemblyExtensions</span></div>
+    <div class="level1"><span class="xref">EnumExtensions</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -106,29 +106,27 @@
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Ease.Util.Extensions.html">Ease.Util.Extensions</a></h6>
   <h6><strong>Assembly</strong>: Ease.Util.dll</h6>
-  <h5 id="Ease_Util_Extensions_AssemblyExtensions_syntax">Syntax</h5>
+  <h5 id="Ease_Util_Extensions_EnumExtensions_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class AssemblyExtensions</code></pre>
+    <pre><code class="lang-csharp hljs">public static class EnumExtensions</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/tausten/Ease.Util/new/master/apiSpec/new?filename=Ease_Util_Extensions_AssemblyExtensions_GetResourceBySuffixAsStream_System_Reflection_Assembly_System_String_.md&amp;value=---%0Auid%3A%20Ease.Util.Extensions.AssemblyExtensions.GetResourceBySuffixAsStream(System.Reflection.Assembly%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/tausten/Ease.Util/new/master/apiSpec/new?filename=Ease_Util_Extensions_EnumExtensions_GetAllEnumValues__1___0_.md&amp;value=---%0Auid%3A%20Ease.Util.Extensions.EnumExtensions.GetAllEnumValues%60%601(%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/tausten/Ease.Util/blob/master/Ease.Util/Extensions/AssemblyExtensions.cs/#L22">View Source</a>
+    <a href="https://github.com/tausten/Ease.Util/blob/master/Ease.Util/Extensions/EnumExtensions.cs/#L29">View Source</a>
   </span>
-  <a id="Ease_Util_Extensions_AssemblyExtensions_GetResourceBySuffixAsStream_" data-uid="Ease.Util.Extensions.AssemblyExtensions.GetResourceBySuffixAsStream*"></a>
-  <h4 id="Ease_Util_Extensions_AssemblyExtensions_GetResourceBySuffixAsStream_System_Reflection_Assembly_System_String_" data-uid="Ease.Util.Extensions.AssemblyExtensions.GetResourceBySuffixAsStream(System.Reflection.Assembly,System.String)">GetResourceBySuffixAsStream(Assembly, String)</h4>
-  <div class="markdown level1 summary"><p>Returns a Stream of the embedded resource matching the passed <code data-dev-comment-type="paramref" class="paramref">resourceNameSuffix</code>. If there is no case-sensitive
-match, then case-insensitive match (if any) will be used. If there are multiple matches, the resource with the shortest
-<code>ManifestResourceName</code> will be used. If there are no matches, <code>null</code> is returned.</p>
+  <a id="Ease_Util_Extensions_EnumExtensions_GetAllEnumValues_" data-uid="Ease.Util.Extensions.EnumExtensions.GetAllEnumValues*"></a>
+  <h4 id="Ease_Util_Extensions_EnumExtensions_GetAllEnumValues__1___0_" data-uid="Ease.Util.Extensions.EnumExtensions.GetAllEnumValues``1(``0)">GetAllEnumValues&lt;TEnum&gt;(TEnum)</h4>
+  <div class="markdown level1 summary"><p>Extension for getting all valid strongly-typed values of the Enum type of the <code data-dev-comment-type="paramref" class="paramref">reference</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Stream GetResourceBySuffixAsStream(this Assembly assembly, string resourceNameSuffix)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;TEnum&gt; GetAllEnumValues&lt;TEnum&gt;(this TEnum reference)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -141,15 +139,9 @@ match, then case-insensitive match (if any) will be used. If there are multiple 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Reflection.Assembly</span></td>
-        <td><span class="parametername">assembly</span></td>
-        <td><p>The <code>Assembly</code> to search for matching embedded resource.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">resourceNameSuffix</span></td>
-        <td><p>The suffix of the <code>ManifestResourceName</code> to look for.</p>
+        <td><span class="xref">TEnum</span></td>
+        <td><span class="parametername">reference</span></td>
+        <td><p>The reference from which to obtain the Enum Type</p>
 </td>
       </tr>
     </tbody>
@@ -164,60 +156,44 @@ match, then case-insensitive match (if any) will be used. If there are multiple 
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.IO.Stream</span></td>
-        <td><p>A <code>Stream</code> of the matching resource, or <code>null</code> if not found.</p>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TEnum&gt;</td>
+        <td><p>The strongly-typed values for the specified Enum type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TEnum</span></td>
+        <td><p>The Enum type</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/tausten/Ease.Util/new/master/apiSpec/new?filename=Ease_Util_Extensions_AssemblyExtensions_GetResourceBySuffixAsString_System_Reflection_Assembly_System_String_System_Text_Encoding_.md&amp;value=---%0Auid%3A%20Ease.Util.Extensions.AssemblyExtensions.GetResourceBySuffixAsString(System.Reflection.Assembly%2CSystem.String%2CSystem.Text.Encoding)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/tausten/Ease.Util/new/master/apiSpec/new?filename=Ease_Util_Extensions_EnumExtensions_GetAllEnumValuesFor__1.md&amp;value=---%0Auid%3A%20Ease.Util.Extensions.EnumExtensions.GetAllEnumValuesFor%60%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/tausten/Ease.Util/blob/master/Ease.Util/Extensions/AssemblyExtensions.cs/#L52">View Source</a>
+    <a href="https://github.com/tausten/Ease.Util/blob/master/Ease.Util/Extensions/EnumExtensions.cs/#L18">View Source</a>
   </span>
-  <a id="Ease_Util_Extensions_AssemblyExtensions_GetResourceBySuffixAsString_" data-uid="Ease.Util.Extensions.AssemblyExtensions.GetResourceBySuffixAsString*"></a>
-  <h4 id="Ease_Util_Extensions_AssemblyExtensions_GetResourceBySuffixAsString_System_Reflection_Assembly_System_String_System_Text_Encoding_" data-uid="Ease.Util.Extensions.AssemblyExtensions.GetResourceBySuffixAsString(System.Reflection.Assembly,System.String,System.Text.Encoding)">GetResourceBySuffixAsString(Assembly, String, Encoding)</h4>
-  <div class="markdown level1 summary"><p>Returns the contents of the embedded resource matching the passed <code data-dev-comment-type="paramref" class="paramref">resourceNameSuffix</code> as a string (read as the
-specified <code data-dev-comment-type="paramref" class="paramref">encoding</code>). If there is no case-sensitive match, then case-insensitive match (if any) will be used. If
-there are multiple matches, the resource with the shortest <code>ManifestResourceName</code> will be used. If there are no matches, <code>null</code> is returned.</p>
+  <a id="Ease_Util_Extensions_EnumExtensions_GetAllEnumValuesFor_" data-uid="Ease.Util.Extensions.EnumExtensions.GetAllEnumValuesFor*"></a>
+  <h4 id="Ease_Util_Extensions_EnumExtensions_GetAllEnumValuesFor__1" data-uid="Ease.Util.Extensions.EnumExtensions.GetAllEnumValuesFor``1">GetAllEnumValuesFor&lt;TEnum&gt;()</h4>
+  <div class="markdown level1 summary"><p>Get the set of strongly-typed values for the specified Enum type <code data-dev-comment-type="typeparamref" class="typeparamref">TEnum</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string GetResourceBySuffixAsString(this Assembly assembly, string resourceNameSuffix, Encoding encoding = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;TEnum&gt; GetAllEnumValuesFor&lt;TEnum&gt;()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Reflection.Assembly</span></td>
-        <td><span class="parametername">assembly</span></td>
-        <td><p>The <code>Assembly</code> to search for matching embedded resource.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">resourceNameSuffix</span></td>
-        <td><p>The suffix of the <code>ManifestResourceName</code> to look for.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Text.Encoding</span></td>
-        <td><span class="parametername">encoding</span></td>
-        <td><p>[optional]The <code>System.Text.Encoding</code> to use when reading the resource.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -228,8 +204,24 @@ there are multiple matches, the resource with the shortest <code>ManifestResourc
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><p>A <code>string</code> of the contents of the matching resource, or <code>null</code> if not found.</p>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TEnum&gt;</td>
+        <td><p>The strongly-typed values for the specified Enum type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TEnum</span></td>
+        <td><p>The Enum type</p>
 </td>
       </tr>
     </tbody>
@@ -242,10 +234,10 @@ there are multiple matches, the resource with the shortest <code>ManifestResourc
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/tausten/Ease.Util/new/master/apiSpec/new?filename=Ease_Util_Extensions_AssemblyExtensions.md&amp;value=---%0Auid%3A%20Ease.Util.Extensions.AssemblyExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/tausten/Ease.Util/new/master/apiSpec/new?filename=Ease_Util_Extensions_EnumExtensions.md&amp;value=---%0Auid%3A%20Ease.Util.Extensions.EnumExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/tausten/Ease.Util/blob/master/Ease.Util/Extensions/AssemblyExtensions.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/tausten/Ease.Util/blob/master/Ease.Util/Extensions/EnumExtensions.cs/#L11" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

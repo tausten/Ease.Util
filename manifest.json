@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Collections.Generic.MapOfCollections-3.html",
-          "hash": "dvyzAIuHnscDXhEWohU5Nw=="
+          "hash": "o4BBNP5WERYz+nciKcnsSQ=="
         }
       },
       "is_incremental": false,
@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Collections.Generic.MapOfConcreteCollections-3.html",
-          "hash": "Pz7JJfi2DKHDDTcRSJnS6w=="
+          "hash": "zIHbAwJbktJp/DJgHvLw0A=="
         }
       },
       "is_incremental": false,
@@ -33,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Collections.Generic.MapOfHashSets-2.html",
-          "hash": "PC1BKXDjcXNc4n4zKKwYtA=="
+          "hash": "o7k1amnf7WRtbV+y6rXOLQ=="
         }
       },
       "is_incremental": false,
@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Collections.Generic.MapOfLists-2.html",
-          "hash": "mqpQQzIWTkr2MgkY+6ljJg=="
+          "hash": "BSvvdjBWeGSDhtMyI7pO1Q=="
         }
       },
       "is_incremental": false,
@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Disposably.FactoryScoped-1.html",
-          "hash": "UOBsIG6tclc49jEN1m9Ldw=="
+          "hash": "ZTnXuJoK+Xh17LXFqGRpJA=="
         }
       },
       "is_incremental": false,
@@ -81,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Disposably.SafeDisposable.html",
-          "hash": "gU+XJik7UDjVvKrcUIk5tw=="
+          "hash": "PMkwkTCmxhJeJO8uGrPkGg=="
         }
       },
       "is_incremental": false,
@@ -93,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Disposably.SafeDisposableWithFinalizer.html",
-          "hash": "szutGd1Zbq2QsVqxtSyrHg=="
+          "hash": "ealqqJHJxtu8ES54+pvmbA=="
         }
       },
       "is_incremental": false,
@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Disposably.Scoped.html",
-          "hash": "/evkmugYy2FuQmBnBn/vlg=="
+          "hash": "eMErQWhkG4aHPxSWGJhz5A=="
         }
       },
       "is_incremental": false,
@@ -117,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Disposably.ScopedLock.html",
-          "hash": "4OoIEZWBMPetjp7wWi5lFg=="
+          "hash": "5LuaoGhrGur8pEJdhuPnIg=="
         }
       },
       "is_incremental": false,
@@ -141,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Extensions.AssemblyExtensions.html",
-          "hash": "/09pKDBZvRgb+ZCy/NEPyA=="
+          "hash": "jLaTIxnRUkNLzWEIihVOBQ=="
         }
       },
       "is_incremental": false,
@@ -153,7 +153,31 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Extensions.DirectoryInfoExtensions.html",
-          "hash": "MfCdUyIKEjnoOOU7d0tu+g=="
+          "hash": "LB1CFjgDvld585KDbAVt1g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ease.Util.Extensions.EnumExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ease.Util.Extensions.EnumExtensions.html",
+          "hash": "SQXkMUaYa2zBBSvyQKayxQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ease.Util.Extensions.EnumerableExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ease.Util.Extensions.EnumerableExtensions.html",
+          "hash": "kRwZlPe/MeMNQtGvtzesjw=="
         }
       },
       "is_incremental": false,
@@ -165,7 +189,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Extensions.StringExtensions.html",
-          "hash": "en+9qTVOzLBGQPIO7gPfsg=="
+          "hash": "gQXi3Bh2ASgve2knrIp8SA=="
         }
       },
       "is_incremental": false,
@@ -177,7 +201,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Extensions.html",
-          "hash": "J+zFLCqo+N2ld2iiHNOT9A=="
+          "hash": "21lhF7Pza+tT7ArCcb3TEA=="
         }
       },
       "is_incremental": false,
@@ -189,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Temp.IScopedTempFile.html",
-          "hash": "AyT2G93wZ9IIAqDzlwgt3g=="
+          "hash": "IvbxcgeiDF5VQullnrPIRg=="
         }
       },
       "is_incremental": false,
@@ -201,7 +225,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Temp.IScopedTempFileManager.html",
-          "hash": "a+yBs2CiHP2EJPf6WWrY3Q=="
+          "hash": "r3Pjz9p8yKjynyq+KmT8OQ=="
         }
       },
       "is_incremental": false,
@@ -213,7 +237,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Temp.Local.LocalScopedTempFile.html",
-          "hash": "jH0S8/b7ojPP92El4YGkEQ=="
+          "hash": "GBPZTvFLa4HKHtg0k/6eXw=="
         }
       },
       "is_incremental": false,
@@ -225,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Temp.Local.LocalScopedTempFileManager.html",
-          "hash": "IpYHtXB5X6nOyM6Z2r5nhA=="
+          "hash": "+Ffcc/SGCF5Vn4QP7ZBs1Q=="
         }
       },
       "is_incremental": false,
@@ -249,7 +273,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Temp.Memory.MemoryScopedTempFile.html",
-          "hash": "IXk42RLB+FOg2ZsIoKhWlw=="
+          "hash": "oyncqzzJJH7QFu8mpbhqJg=="
         }
       },
       "is_incremental": false,
@@ -261,7 +285,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Temp.Memory.MemoryScopedTempFileManager.html",
-          "hash": "yrUooZVO2l2OKCHcFRyPig=="
+          "hash": "9W7xABGdSmy6nM2p61g71g=="
         }
       },
       "is_incremental": false,
@@ -285,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Temp.ScopedTempFile.html",
-          "hash": "0pvxyrbhznXpxNGXGA5N8w=="
+          "hash": "YuwuZWSUPYwjmEQKM0ZFsg=="
         }
       },
       "is_incremental": false,
@@ -297,7 +321,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ease.Util.Temp.ScopedTempFileManager.html",
-          "hash": "dZu9U6EiVPRFOGiXsOY60w=="
+          "hash": "leL7ue+6QqBD2YM7dLBpFg=="
         }
       },
       "is_incremental": false,
@@ -321,7 +345,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "0yOufn1Ix6Mye8fpi9fkiQ=="
+          "hash": "ATtwuOAdk6zXtLY99QOFnA=="
         }
       },
       "is_incremental": false,
@@ -333,7 +357,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "MmrcQ/1mCEKmdhWJMYOecw=="
+          "hash": "dXyW+lsssH12bC01wCcSeQ=="
         }
       },
       "is_incremental": false,
@@ -345,7 +369,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/disposably.html",
-          "hash": "VQP6kth6uCkoaGb/9mV2Dw=="
+          "hash": "q9YCPnVhlB/CaXBnFHcQtA=="
         }
       },
       "is_incremental": false,
@@ -357,7 +381,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "xiq6i9GZ7dApqOZ4jM2/BQ=="
+          "hash": "VEeZ6p7/xsOQY2HDIzivSw=="
         }
       },
       "is_incremental": false,
@@ -381,7 +405,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "QYD8+YQSLiRtB3cALSvaEA=="
+          "hash": "e3LLvLPOfbl1hq9572GK9g=="
         }
       },
       "is_incremental": false,
@@ -411,6 +435,13 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
@@ -420,14 +451,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 26,
-          "skipped_file_count": 0
-        },
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
+          "total_file_count": 28,
           "skipped_file_count": 0
         }
       }

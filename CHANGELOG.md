@@ -1,6 +1,7 @@
 ## 0.3.0
 * `MapOfCollections<TKey,TCollection,TValue>` and convenience specializations `MapOfHashSets<TKey,TValue>` and `MapOfLists<TKey,TValue>`
 * Simple `Enum` helpers/extensions.
+* `IEnumerable<T>` extensions for batching
 
 ## 0.2.0
 * `String.ToValueOr(...)` fixes: properly support `TimeSpan`, support Enums, more test coverage
